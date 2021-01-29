@@ -7,7 +7,7 @@
         opacity: 0.9;
     }
     
-    .active {
+    .active-top-navbar {
         border: 1px solid #ccc;
         padding: 10px;
         -webkit-box-shadow: 1px 1px 2px;
@@ -24,7 +24,7 @@
     <div class="float-right">
         <ul class="flex">
             <li class="mr-6">
-                <a class="text-black active" title="Home Page" href="#">Services</a>
+                <a class="text-black active-top-navbar " title="Home Page" href="#">Services</a>
             </li>
             <li class="mr-6">
                 <a class="text-black" title="Send Email" href="{{  route('email_page')  }}">Events</a>
