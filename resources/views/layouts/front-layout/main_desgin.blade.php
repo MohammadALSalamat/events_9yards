@@ -66,30 +66,35 @@ href="{{ url('admin-style/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bo
         </div> --}}
 
     @include('layouts.front-layout.top-navbar')
-    @include('layouts.front-layout.sidebar')
-    @include('layouts.front-layout.right_panel')
+    @include('layouts.front-layout.partners')
+
+
 
         <!-- Control Sidebar -->
         <aside class="control-sidebar control-sidebar-dark">
             <!-- Control sidebar content goes here -->
         </aside>
     </div> <!-- end of div Wrapper -->
+
+
+
     @include('layouts.front-layout.footer')
+
    <!-- /.Footer-wrapper -->
    {{-- <footer class="main-footer">
        <div class="grid grid-cols-12 gap-2 sm:grid-cols-3 lg:grid-col-8">
         <div class=" d-block">
-            <i class="mb-4  fa fa-user d-block"></i>
-            <i class="mb-4  fa fa-user d-block"></i>
-            <i class="mb-4  fa fa-user d-block"></i>
-            <i class="mb-4  fa fa-user d-block"></i>
+            <i class="mb-4 fa fa-user d-block"></i>
+            <i class="mb-4 fa fa-user d-block"></i>
+            <i class="mb-4 fa fa-user d-block"></i>
+            <i class="mb-4 fa fa-user d-block"></i>
 
         </div>
         <div class=" border-right-1">
-            <i class="mr-4  fa fa-user"></i>
-            <i class="mr-4  fa fa-user"></i>
-            <i class="mr-4  fa fa-user"></i>
-            <i class="mr-4  fa fa-user"></i>
+            <i class="mr-4 fa fa-user"></i>
+            <i class="mr-4 fa fa-user"></i>
+            <i class="mr-4 fa fa-user"></i>
+            <i class="mr-4 fa fa-user"></i>
         </div>
         <div>
             logo
@@ -121,6 +126,8 @@ href="{{ url('admin-style/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bo
     <!-- Price picker slider -->
     <!-- Custom js -->
     <script src="{{ url('js/custom.js') }}"></script>
+
+    <script src="{{ url('js/main.js') }}"></script>
     <!-- Important link to work Toastr-->
     <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
 
