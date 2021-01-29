@@ -7,7 +7,7 @@
                 <div class="col-md-12">
                     <div class="aa-footer-top-area">
                         <div class="row">
-                            <div class="col-md-6 col-sm-8">
+                            <div class="col-md-8 col-sm-8">
                                 <div class="aa-footer-widget">
                                     <div class="aa-footer-widget">
                                         <address>
@@ -20,19 +20,20 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="mt-3 col-md-3 col-sm-6">
-                                <div class="py-6 border-r-2 aa-footer-widget">
+                            <div class="mt-1 col-md-3 col-sm-6">
+                                <div class="py-6 border-r-2 aa-footer-widget float-right">
                                     <div class="aa-footer-widget">
+                                        <h1 class=" text-sm w-full font-sans text-right pr-2">contact with us</h1>
                                         <div class="aa-footer-social">
-                                            <a href="#"><span class="fa fa-facebook-f text-white"></span></a>
-                                            <a href="#"><span class="fa fa-twitter"></span></a>
-                                            <a href="#"><span class="fa fa-google-plus"></span></a>
-                                            <a href="#"><span class="fa fa-youtube"></span></a>
+                                            <a href="#"><i class="fab fa-facebook-square w-full"></i></a>
+                                            <a href="#"><i class="fab fa-instagram-square"></i></a>
+                                            <a href="#"><i class="fab fa-twitter-square"></i></span></a>
+                                            <a href="#"><i class="fab fa-linkedin-square"></i></span></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="mt-3 col-md-3 col-sm-6">
+                            <div class="mt-3 col-md-1 col-sm-6">
                                 <div class="aa-footer-widget">
                                     <div class="aa-footer-widget">
                                         <img src="{{ asset('logo/logo9yardsevents.png') }}" alt="9yards_logo">
@@ -55,9 +56,9 @@
                                 Salamat</a></p>
                     </div>
                 </div>
-                <div class="col-md-6 float-right">
-                    <div class="aa-footer-bottom-area text-right">
-                        <p class="text-right">Made With <i class="fa fa-heart" style="color: red;"></i> 9Yards</p>
+                <div class="col-md-6 ">
+                    <div class="aa-footer-bottom-area text-right w-full">
+                        <p class="text-right w-full">Made With <i class="fa fa-heart" style="color: red;"></i> 9Yards</p>
                     </div>
                 </div>
             </div>

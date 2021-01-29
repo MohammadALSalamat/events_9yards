@@ -80,32 +80,7 @@ href="{{ url('admin-style/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bo
 
     @include('layouts.front-layout.footer')
 
-   <!-- /.Footer-wrapper -->
-   {{-- <footer class="main-footer">
-       <div class="grid grid-cols-12 gap-2 sm:grid-cols-3 lg:grid-col-8">
-        <div class=" d-block">
-            <i class="mb-4 fa fa-user d-block"></i>
-            <i class="mb-4 fa fa-user d-block"></i>
-            <i class="mb-4 fa fa-user d-block"></i>
-            <i class="mb-4 fa fa-user d-block"></i>
 
-        </div>
-        <div class=" border-right-1">
-            <i class="mr-4 fa fa-user"></i>
-            <i class="mr-4 fa fa-user"></i>
-            <i class="mr-4 fa fa-user"></i>
-            <i class="mr-4 fa fa-user"></i>
-        </div>
-        <div>
-            logo
-        </div>
-       </div>
-    <div class="float-right d-none d-sm-block">
-        <b>Version</b> 3.1.0-pre
-    </div>
-    <strong>Copyright &copy;2020 <a href="#">Mohammad Al Salamat</a>.</strong> All rights
-    reserved.
-</footer> --}}
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
