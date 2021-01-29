@@ -66,6 +66,7 @@ href="{{ url('admin-style/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bo
         </div> --}}
 
     @include('layouts.front-layout.top-navbar')
+    @include('layouts.front-layout.projects')
     @include('layouts.front-layout.partners')
 
 
