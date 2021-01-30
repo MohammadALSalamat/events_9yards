@@ -1,9 +1,12 @@
 
-<div class="h-screen " style="background-color: #F2F7F9;">
-    <div class="container grid gap-4 p-6 pt-20 xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 ">
-        <div>content</div>
-        <div>
-            <div class="slideshow-container">
+<div class="pb-32 px-0" style="background-color: #F2F7F9;">
+    <div class=" grid gap-4  pt-20 xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 ">
+        <div class="text-center pt-20">
+            <h1 class="pb-10 ">Leading Events Organizer in UAE</h1>
+            <p class="w-75 pl-48 text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet orci lorem. Etiam vel sem elit. Ut congue mollis orci eu ultricies. Ut in lacus enim. Duis imperdiet faucibus ipsum, id lobortis ante euismod eu. Sed tempor ipsum nunc, in porta nisi fringilla ut. Aenean venenatis sapien metus, egestas eleifend nibh laoreet nec. Aliquam erat volutpat. Integer semper sem eu massa ultricies faucibus. Nam euismod, ex a cursus viverra, ex velit porttitor ex, eu vehicula nisl nibh sit amet mauris. Aenean quam magna, consequat in lectus et, sollicitudin dictum lacus. Nullam ornare eu ipsum ac faucibus.</p>
+        </div>
+        <div class="p-10" style="background: #1D2C38">
+            <div class="slideshow-container " style="width: 70%;">
 
                 <div class="mySlides fade">
                     <div class="numbertext">1 / 3</div>
