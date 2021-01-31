@@ -53,7 +53,8 @@ href="{{ url('admin-style/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bo
 <script src="{{ url('admin-style/plugins/summernote/summernote-bs4.min.js') }}"></script>
 <!-- buttons style-->
 <link rel="stylesheet" href="{{ url('css/backend_css/theme.css') }}">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Imbue:wght@500&family=Pinyon+Script&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -65,10 +66,11 @@ href="{{ url('admin-style/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bo
             </div>
         </div> --}}
 
-    @include('layouts.front-layout.top-navbar')
-    @include('layouts.front-layout.leadingpage')
-    @include('layouts.front-layout.projects')
-    @include('layouts.front-layout.partners')
+    @include('layouts.front-layout.top-navbar') <!-- menu code  -->
+        @include('layouts.front-layout.homePage') <!-- homepage code  -->
+    @include('layouts.front-layout.leadingpage')<!-- leanding code  -->
+    @include('layouts.front-layout.projects')<!-- Projects code  -->
+    @include('layouts.front-layout.partners')<!-- logos of partners code  -->
 
 
 
@@ -80,7 +82,7 @@ href="{{ url('admin-style/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bo
 
 
 
-    @include('layouts.front-layout.footer')
+    @include('layouts.front-layout.footer')<!-- Footer code  -->
 
 
     <!-- jQuery library -->

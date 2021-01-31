@@ -50,20 +50,20 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-header">Reports Section</li>
+                <li class="nav-header">Home Page Section</li>
                 <li class="nav-item">
-                    <a href="{{ route('Show_Reports') }}" class="nav-link">
+                    <a href=" #" class="nav-link">
                         <i class="nav-icon fa fa-envelope"></i>
                         <p>
-                            ALL Reports
+                            Home Page
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ route('Show_Reports') }}" class="nav-link active">
+                            <a href="{{ route('Change_logo') }}" class="nav-link active">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>View Reports</p>
+                                <p>Top NavBar Logo</p>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -101,3 +101,8 @@
     </div>
     <!-- /.sidebar -->
 </aside>
+
+
+
+
+

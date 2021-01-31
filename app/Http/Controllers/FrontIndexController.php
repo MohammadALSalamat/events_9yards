@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\FrontUser;
+use App\Models\HomePage;
 use Illuminate\Http\Request;
 
 class FrontIndexController extends Controller
@@ -38,8 +39,8 @@ class FrontIndexController extends Controller
     public function main_page(Request $request)
     {
         $CurrentUser = FrontUser::where(['name' => $request->session()->get('FrontUserID')])->first();
-
-        return view('layouts.front-layout.main_desgin', compact('CurrentUser'));
+        $logo_detaile = HomePage::first();
+        return view('layouts.front-layout.main_desgin', compact('CurrentUser',"logo_detaile"));
     }
 
 

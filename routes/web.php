@@ -59,11 +59,12 @@ Route::group(['middleware' => ['admin']], function () {
     /*+++++++++++++++++++++++++++++++ End  the user Routs +++++++++++++++++++++++++++*/
 
 
-    /*+++++++++++++++++++++++++++++++ Start  the report Routs +++++++++++++++++++++++++++*/
+    /*+++++++++++++++++++++++++++++++ Start  the HomePage Routs +++++++++++++++++++++++++++*/
 
-    Route::get('/reports', [ReportController::class, 'viewReports'])->name('Show_Reports');
+    Route::get("/Change-logo",[\App\Http\Controllers\HomePageController::class , "modify_logo_homepage" ])->name("Change_logo"); // logo detailes
+    Route::post("/Edit-logo",[\App\Http\Controllers\HomePageController::class , "Edit_logo" ])->name("Edit_logo"); // logo Edit
 
-    /*+++++++++++++++++++++++++++++++ End  the report Routs +++++++++++++++++++++++++++*/
+    /*+++++++++++++++++++++++++++++++ End  the HomePage Routs +++++++++++++++++++++++++++*/
 });
 
 
