@@ -67,9 +67,9 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{ route('View_Header_Section') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Sent Reports</p>
+                                <p>Header Section</p>
                             </a>
                         </li>
                         <li class="nav-item">

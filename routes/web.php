@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontIndexController;
 use App\Http\Controllers\BackDashboardController;
+use App\Http\Controllers\HeaderSectionController;
 use App\Http\Controllers\InformationController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\UserSection;
@@ -61,8 +62,14 @@ Route::group(['middleware' => ['admin']], function () {
 
     /*+++++++++++++++++++++++++++++++ Start  the HomePage Routs +++++++++++++++++++++++++++*/
 
-    Route::get("/Change-logo",[\App\Http\Controllers\HomePageController::class , "modify_logo_homepage" ])->name("Change_logo"); // logo detailes
-    Route::post("/Edit-logo",[\App\Http\Controllers\HomePageController::class , "Edit_logo" ])->name("Edit_logo"); // logo Edit
+    Route::get("/Change-logo", [\App\Http\Controllers\HomePageController::class, "modify_logo_homepage"])->name("Change_logo"); // logo detailes
+    Route::post("/Edit-logo", [\App\Http\Controllers\HomePageController::class, "Edit_logo"])->name("Edit_logo"); // logo Edit
+
+
+    // Header Sections
+    Route::get('/header_section', [HeaderSectionController::class, 'HeaderSection'])->name('View_Header_Section'); // view both slideshow and titles
+    Route::get('/Edit_titles/{id}', [HeaderSectionController::class, 'Edit_Titles'])->name('Edit_Titles'); // view both slideshow and titles
+    Route::post('/Update_Edit_Titles/{id}', [HeaderSectionController::class, 'Update_Edit_Titles'])->name('Update_Edit_Titles'); // view both slideshow and titles
 
     /*+++++++++++++++++++++++++++++++ End  the HomePage Routs +++++++++++++++++++++++++++*/
 });
