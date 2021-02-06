@@ -71,6 +71,10 @@ Route::group(['middleware' => ['admin']], function () {
     Route::get('/Edit_titles/{id}', [HeaderSectionController::class, 'Edit_Titles'])->name('Edit_Titles'); // view both slideshow and titles
     Route::post('/Update_Edit_Titles/{id}', [HeaderSectionController::class, 'Update_Edit_Titles'])->name('Update_Edit_Titles'); // view both slideshow and titles
 
+    // header slider section
+    Route::get('/header_slider_section', [HeaderSectionController::class, 'HeaderSlideshowSection'])->name('Add_slideShow'); // view both slideshow and titles
+    Route::post('/insert_slider_image', [HeaderSectionController::class, 'insert_slider_image'])->name('insert_slider_image'); // view both slideshow and titles
+
     /*+++++++++++++++++++++++++++++++ End  the HomePage Routs +++++++++++++++++++++++++++*/
 });
 

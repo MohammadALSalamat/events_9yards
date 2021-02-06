@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\headerSection;
 use Brian2694\Toastr\Facades\Toastr;
+use Intervention\Image\Facades\Image;
 use App\Models\headerSlideshowSection;
 
 class HeaderSectionController extends Controller
@@ -43,5 +44,42 @@ class HeaderSectionController extends Controller
             Toastr::success('Congrats!! You have Edit Your Titles.', 'Success');
             return back();
         }
+    }
+    // add slideshow section
+    public function HeaderSlideshowSection()
+    {
+        return view('Back-End.Home-Page.HeaderSections.add_new_slideshow');
+    }
+    public function insert_slider_image(Request $request)
+    {
+        # insert the data
+        $data = $request->all();
+        if (empty($data['status'])) {
+            $status = 0;
+        } else {
+            $status = 1;
+        }
+        if (empty($data['status'])) {
+            Toastr::error(' Sorry !! image can not be empty!!!', 'Error');
+            return back();
+        }
+        // save the image
+        if ($request->hasFile('avatar')) {
+            $temp_image = $request->file('avatar');
+            if ($temp_image->isValid()) {
+                $extentions = $temp_image->clientExtension();
+                $fileName = rand(1, 10000000) . '.' . $extentions;
+                $avatar_path = 'admin-style/sliders/header_slideshow/' . $fileName;
+                Image::make($temp_image)->resize(1300, 700)->save($avatar_path);
+                $request->session()->put('Image_Path', $fileName);
+            }
+        }
+
+        $newdata = new headerSlideshowSection();
+        $newdata->slideshow = $fileName;
+        $newdata->status = $status;
+        $newdata->save();
+        Toastr::success('Congrats!! You have Add Slider to your header section.', 'Success');
+        return back();
     }
 }

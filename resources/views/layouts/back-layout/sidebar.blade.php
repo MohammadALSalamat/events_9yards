@@ -73,9 +73,9 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{ route('Add_slideShow') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Unsent Reports</p>
+                                <p>Add SlideShow </p>
                             </a>
                         </li>
                     </ul>

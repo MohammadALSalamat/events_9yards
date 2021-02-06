@@ -22,23 +22,15 @@
         <div class="pt-24 ">
             <div class="slideshow-container ">
 
+                @foreach ($headerSlideShows as $slider)
+                @if ($slider->status == 1)
                 <div class="HomemySlides fade">
-                    <div class="numbertext">1 / 3</div>
-                    <img src="{{ asset('img/slider/1.jpg') }}" style="width:100%;height:400px">
-                    <div class="text">Caption 1</div>
+                    <div class="numbertext">{{ $slider->id }} / 3</div>
+                    <img src="{{ asset('admin-style/sliders/header_slideshow/'.$slider->slideshow) }}" style="width:100%;height:400px">
+                    <div class="text">Caption {{ $slider->id }} </div>
                 </div>
-
-                <div class="HomemySlides fade">
-                    <div class="numbertext">2 / 3</div>
-                    <img src="{{ asset('img/slider/2.jpg') }}" style="width:100%;height:400px">
-                    <div class="text">Caption Two</div>
-                </div>
-
-                <div class="HomemySlides fade">
-                    <div class="numbertext">3 / 3</div>
-                    <img src="{{ asset('img/slider/3.jpg') }}" style="width:100%;height:400px">
-                    <div class="text">Caption Three</div>
-                </div>
+                @endif
+                @endforeach
 
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -47,9 +39,11 @@
             <br>
 
             <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
+                @foreach ($headerSlideShows as $slider)
+                @if ($slider->status == 1)
+                <span class="dot" onclick="currentSlide({{ $slider->id }})"></span>
+                @endif
+                @endforeach
             </div>
         </div>
     </div>

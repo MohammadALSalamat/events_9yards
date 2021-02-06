@@ -44,7 +44,7 @@ class FrontIndexController extends Controller
         $logo_detaile = HomePage::first(); // logo
         $headerTitles = headerSection::first(); // get the titles
         $headerSlideShows = headerSlideshowSection::get(); // get the slideShow images
-        return view('layouts.front-layout.main_desgin', compact('CurrentUser', "logo_detaile", "headerTitles"));
+        return view('layouts.front-layout.main_desgin', compact('CurrentUser', "logo_detaile", "headerTitles", "headerSlideShows"));
     }
 
 

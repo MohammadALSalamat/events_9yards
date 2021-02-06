@@ -59,14 +59,10 @@
                                                     <span style="color:red"> Not Active</span>
                                                 @endif</td>
                                                 <td style="width: 20% !important">
-                                                    <a href="{{ route('Edit_Titles',$user->id) }}"><button type="button"
+                                                    <a href="{{ route('Edit_Titles',$user->id) }}"><button style="width: 100% !important" type="button"
                                                              class="btn btn-outline-primary btn-md"><i
                                                                 class="fa fa-pencil" aria-hidden="true"></i>
                                                             Modify</button></a>
-                                                    <a href="javascript:"><button rel="{{ $user->id }}" rel1="user"
-                                                            type="button"
-                                                            class="btn btn-outline-danger btn-md deleteRecord">
-                                                            Delete</button></a>
                                                 </td>
                                             </tr>
                                         @endforeach
@@ -98,10 +94,9 @@
                                     <tbody style="line-height: 4 !important;">
                                         @foreach ($slideshow_section as $user)
                                             <tr style="text-align: center;">
-                                                {{-- <td style="width: 50px; !important"> <img class="profile-user-img img-fluid"
-                                                        src="{{ asset('admin-style/admin-images/' . $user->avatar) }}"
-                                                        alt="User picture">
-                                                </td> --}}
+                                                <td>{{ $user->id }}</td>
+                                                <td style="width: 50px; !important"> <img class="profile-user-img img-fluid" src="{{ asset('admin-style/sliders/header_slideshow/'.$user->slideshow) }}" alt="slider" width="100px" height="100px" >
+                                                </td>
                                                 <td>@if ($user->status == 1)
                                                     <span style="color:green"> Active</span>
                                                     @else
