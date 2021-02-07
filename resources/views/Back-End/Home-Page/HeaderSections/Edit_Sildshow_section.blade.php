@@ -7,12 +7,12 @@
             <div class="container-fluid">
                 <div class="mb-2 row">
                     <div class="col-sm-6">
-                        <h1>Edit Header Titles</h1>
+                        <h1> Edit Slide Show</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Home</a></li>
-                            <li class="breadcrumb-item active">Edit Header Titles</li>
+                            <li class="breadcrumb-item active"> Edit Slide Show</li>
                         </ol>
                     </div>
                 </div>
@@ -29,25 +29,27 @@
                         <!-- jquery validation -->
                         <div class="card card-primary">
                             <div class="card-header">
-                                <h3 class="card-title">Form To <small> Edit Header Titles</small></h3>
+                                <h3 class="card-title">Form To <small> Edit Slide Show</small></h3>
                             </div>
                             <!-- /.card-header -->
                             <!-- form start -->
-                            <form id="quickForm" action="{{ route('Update_Edit_Titles',$Titles->id) }}" method="post"
+                            <form id="quickForm" action="{{ route('upadte_EditSlideShow',$Slide_show->id) }}" method="post"
                                 enctype="multipart/form-data">
                                 @csrf
                                 <div class="card-body">
+                                    <h3 class="mb-5">Current Image</h3>
+                                    <img src="{{ asset('admin-style/sliders/header_slideshow/'.$Slide_show->slideshow)}}" alt="Current_image" srcset="" width="300px" height="200px" class="mb-5">
                                     <div class="form-group">
                                         <label for="exampleInputavater">Avater</label>
                                         <input type="file" name="avatar" class="form-control" id="exampleInputavatar">
                                         <input type="hidden" name="current_image" class="form-control"
-                                            value="profile_defult.jpg">
+                                            value="{{$Slide_show->slideshow}}">
 
                                     </div>
                                         <div
                                             class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
                                             <input type="checkbox" class="custom-control-input" id="customSwitch3"
-                                                name="status" @if ($Titles->status == 1)
+                                                name="status" @if ($Slide_show->status == 1)
                                                 checked
                                                 @endif >
                                             <label class="custom-control-label" for="customSwitch3">Once You Toggle this
@@ -122,7 +124,7 @@
                         minlength: "Your password must be at least 5 characters long"
                     },
                     postion: {
-                        required: "Please Select one of the postions ",
+                        required: "Please Select one of the postions",
                     },
                 },
                 errorElement: 'span',

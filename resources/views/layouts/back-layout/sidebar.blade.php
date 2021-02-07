@@ -69,13 +69,13 @@
                         <li class="nav-item">
                             <a href="{{ route('View_Header_Section') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Header Section</p>
+                                <p> Edit Header Section</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('Add_slideShow') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Add SlideShow </p>
+                                <p>Add Header SlideShow</p>
                             </a>
                         </li>
                     </ul>

@@ -17,7 +17,7 @@
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Home</a></li>
                             <li class="breadcrumb-item active">DataTables</li>
                         </ol>
                     </div>
@@ -48,20 +48,23 @@
                                     </thead>
                                     <tbody style="line-height: 4 !important;">
                                         @foreach ($title_sections as $user)
-                                            <tr >
+                                            <tr>
                                                 <td>{{ $user->id }}</td>
                                                 <td>{{ $user->top_title }}</td>
                                                 <td> {{ $user->bottom_title }}</td>
                                                 <td style="width:30% !important">{{ $user->paragraph }}</td>
-                                                <td>@if ($user->status == 1)
-                                                    <span style="color:green"> Active</span>
+                                                <td>
+                                                    @if ($user->status == 1)
+                                                        <span style="color:green"> Active</span>
                                                     @else
-                                                    <span style="color:red"> Not Active</span>
-                                                @endif</td>
+                                                        <span style="color:red"> Not Active</span>
+                                                    @endif
+                                                </td>
                                                 <td style="width: 20% !important">
-                                                    <a href="{{ route('Edit_Titles',$user->id) }}"><button style="width: 100% !important" type="button"
-                                                             class="btn btn-outline-primary btn-md"><i
-                                                                class="fa fa-pencil" aria-hidden="true"></i>
+                                                    <a href="{{ route('Edit_Titles', $user->id) }}"><button
+                                                            style="width: 100% !important" type="button"
+                                                            class="btn btn-outline-primary btn-md"><i class="fa fa-pencil"
+                                                                aria-hidden="true"></i>
                                                             Modify</button></a>
                                                 </td>
                                             </tr>
@@ -95,20 +98,24 @@
                                         @foreach ($slideshow_section as $user)
                                             <tr style="text-align: center;">
                                                 <td>{{ $user->id }}</td>
-                                                <td style="width: 50px; !important"> <img class="profile-user-img img-fluid" src="{{ asset('admin-style/sliders/header_slideshow/'.$user->slideshow) }}" alt="slider" width="100px" height="100px" >
+                                                <td style="width: 50px; !important"> <img class="profile-user-img img-fluid"
+                                                        src="{{ asset('admin-style/sliders/header_slideshow/' . $user->slideshow) }}"
+                                                        alt="slider" width="100px" height="100px">
                                                 </td>
-                                                <td>@if ($user->status == 1)
-                                                    <span style="color:green"> Active</span>
-                                                    @else
-                                                    <span style="color:red"> Not Active</span>
-                                                @endif</td>
                                                 <td>
-                                                    <a href="#"><button type="button"
+                                                    @if ($user->status == 1)
+                                                        <span style="color:green"> Active</span>
+                                                    @else
+                                                        <span style="color:red"> Not Active</span>
+                                                    @endif
+                                                </td>
+                                                <td>
+                                                    <a href="{{ route('EditSlideShow', $user->id) }}"><button type="button"
                                                             style="width: 45%" class="btn btn-outline-primary btn-md"><i
                                                                 class="fa fa-pencil" aria-hidden="true"></i>
                                                             Modify</button></a>
-                                                    <a href="javascript:"><button rel="{{ $user->id }}" rel1="header"
-                                                            type="button" style="width: 45%"
+                                                    <a href="javascript:"><button rel="{{ $user->id }}"
+                                                            rel1="slideshow" type="button" style="width: 45%"
                                                             class="btn btn-outline-danger btn-md deleteRecord">
                                                             Delete</button></a>
                                                 </td>

@@ -82,4 +82,57 @@ class HeaderSectionController extends Controller
         Toastr::success('Congrats!! You have Add Slider to your header section.', 'Success');
         return back();
     }
+        // modify the slideshow
+        public function EditSlideShow($id)
+        {
+            # view the section 
+            $Slide_show = HeaderSlideshowSection::where('id',$id)->first();
+            return view('Back-End.Home-Page.HeaderSections.Edit_Sildshow_section',compact('Slide_show'));
+        }
+
+        // update the upadte_EditSlideShow
+        public function upadte_EditSlideShow(Request $request, $id)
+        {
+            # update the contect
+            $data = $request->all();
+            if(empty($data['avatar'])){
+                $fileName = $data['current_image'];
+            }else{
+                if ($request->hasFile('avatar')) {
+                    $temp_image = $request->file('avatar');
+                    if ($temp_image->isValid()) {
+                        $extentions = $temp_image->clientExtension();
+                        $fileName = rand(1, 10000000) . '.' . $extentions;
+                        $avatar_path = 'admin-style/sliders/header_slideshow/' . $fileName;
+                        Image::make($temp_image)->resize(1300, 700)->save($avatar_path);
+                        $request->session()->put('Image_Path', $fileName);
+                    }
+                }
+            }
+            if (empty($data['status'])) {
+                $status = 0;
+            } else {
+                $status = 1;
+            }
+            HeaderSlideshowSection::where('id',$id)->update([
+                'slideshow'=>$fileName,
+                'status'=>$status
+            ]);
+            Toastr::success('Congrats!! You have Add Slider to your header section.', 'Success');
+            return back();
+        }
+
+    // deleted the slide show from your view
+
+    public function DeleteSlideShow($id)
+    {
+        $slider_by_id = headerSlideshowSection::where('id',$id)->first();
+        if(empty($slider_by_id)){
+            Toastr::error(' Sorry !! This slide show is not found !!!', 'Error');
+            return redirect(route('View_Header_Section'));
+        }
+        headerSlideshowSection::where('id',$id)->delete();
+        Toastr::warning('Congrats!! You have deleted the Slider!!!', 'Warning');
+        return back();
+    }
 }

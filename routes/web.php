@@ -74,6 +74,9 @@ Route::group(['middleware' => ['admin']], function () {
     // header slider section
     Route::get('/header_slider_section', [HeaderSectionController::class, 'HeaderSlideshowSection'])->name('Add_slideShow'); // view both slideshow and titles
     Route::post('/insert_slider_image', [HeaderSectionController::class, 'insert_slider_image'])->name('insert_slider_image'); // view both slideshow and titles
+    Route::get('/EditSlideShow/{id}', [HeaderSectionController::class, 'EditSlideShow'])->name('EditSlideShow'); // edit slideshow image
+    Route::post('/EditSlideShow/{id}', [HeaderSectionController::class, 'upadte_EditSlideShow'])->name('upadte_EditSlideShow'); // edit slideshow image
+    Route::match(['get','post'],'admin/slideshow/{id}',[HeaderSectionController::class , 'DeleteSlideShow'])->name('Delete_slideshow'); // delete the
 
     /*+++++++++++++++++++++++++++++++ End  the HomePage Routs +++++++++++++++++++++++++++*/
 });
