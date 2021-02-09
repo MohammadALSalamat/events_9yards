@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Tue Feb 09 2021 16:02:13 GMT+0400 (Gulf Standard Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/layouts/front-layout/homePage.blade.php
+
+
+Created files:
+* app/Http/Controllers/LeadingPageController.php
+* app/Models/leadingPage.php
+* database/migrations/2021_02_09_114656_create_leading_pages_table.php
+* "resources/views/Back-End/Home-Page/Leading page/view_leading_page.blade.php"
+
+
+Deleted files:
+
+
+Renamed files:
