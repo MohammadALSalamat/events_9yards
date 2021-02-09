@@ -15,6 +15,9 @@ class CreateLeadingPagesTable extends Migration
     {
         Schema::create('leading_pages', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('paragraph');
+            $table->integer('Status')->default(1);
             $table->timestamps();
         });
     }

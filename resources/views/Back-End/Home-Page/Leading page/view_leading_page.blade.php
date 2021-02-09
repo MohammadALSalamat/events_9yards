@@ -40,18 +40,16 @@
                                         <tr style="text-align: center;">
                                             <th>#ID</th>
                                             <th>Top Title</th>
-                                            <th>Bottom Title</th>
                                             <th>Pargraph</th>
                                             <th>Status</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody style="line-height: 4 !important;">
-                                        @foreach ($title_sections as $user)
+                                        @foreach ($leading_page_info as $user)
                                             <tr>
                                                 <td>{{ $user->id }}</td>
                                                 <td>{{ $user->top_title }}</td>
-                                                <td> {{ $user->bottom_title }}</td>
                                                 <td style="width:30% !important">{{ $user->paragraph }}</td>
                                                 <td>
                                                     @if ($user->status == 1)
@@ -78,7 +76,7 @@
                         <!-- /.card -->
                     </div>
                     <!-- /.col -->
-                    <div class="col-12">
+                    {{-- <div class="col-12">
                         <div class="card">
                             <div class="card-header">
                                 <h3 class="card-title">DataTable To View SlideShows</h3>
@@ -128,7 +126,7 @@
                             <!-- /.card-body -->
                         </div>
                         <!-- /.card -->
-                    </div>
+                    </div> --}}
                 </div>
                 <!-- /.row -->
             </div>

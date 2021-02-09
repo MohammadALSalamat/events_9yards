@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontIndexController;
 use App\Http\Controllers\BackDashboardController;
+use App\Http\Controllers\LeadingPageController;
 use App\Http\Controllers\HeaderSectionController;
 use App\Http\Controllers\InformationController;
 use App\Http\Controllers\ReportController;
@@ -77,6 +78,9 @@ Route::group(['middleware' => ['admin']], function () {
     Route::get('/EditSlideShow/{id}', [HeaderSectionController::class, 'EditSlideShow'])->name('EditSlideShow'); // edit slideshow image
     Route::post('/EditSlideShow/{id}', [HeaderSectionController::class, 'upadte_EditSlideShow'])->name('upadte_EditSlideShow'); // edit slideshow image
     Route::match(['get','post'],'admin/slideshow/{id}',[HeaderSectionController::class , 'DeleteSlideShow'])->name('Delete_slideshow'); // delete the
+
+    // leading page
+    Route::get('/View_leading_page', [LeadingPageController::class , 'View_leading_page'])->name('View_leading_page');
 
     /*+++++++++++++++++++++++++++++++ End  the HomePage Routs +++++++++++++++++++++++++++*/
 });
