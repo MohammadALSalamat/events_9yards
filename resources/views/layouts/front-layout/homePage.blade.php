@@ -25,7 +25,7 @@
                 @foreach ($headerSlideShows as $slider)
                 @if ($slider->status == 1)
                 <div class="HomemySlides fade">
-                    <div class="numbertext">{{ $slider->id }} / 3</div>
+                    <div class="numbertext">{{ $slider->id }} / 3</div> 
                     <img src="{{ asset('admin-style/sliders/header_slideshow/'.$slider->slideshow) }}" style="width:100%;height:400px">
                     <div class="text">Caption {{ $slider->id }} </div>
                 </div>
