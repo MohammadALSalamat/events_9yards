@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Thu Feb 11 2021 09:33:17 GMT+0400 (Gulf Standard Time)
+------------------------------------------------------
+
+Modified files:
+* "resources/views/Back-End/Home-Page/Leading page/view_leading_page.blade.php"
+
+
+Created files:
+* .autogit/logs/log-10-1-2021-17-43-44.txt
+
+
+Deleted files:
+
+
+Renamed files:
