@@ -7,6 +7,7 @@ use App\Http\Controllers\BackDashboardController;
 use App\Http\Controllers\LeadingPageController;
 use App\Http\Controllers\HeaderSectionController;
 use App\Http\Controllers\InformationController;
+use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\UserSection;
 use App\Mail\RandomMail;
@@ -89,6 +90,7 @@ Route::group(['middleware' => ['admin']], function () {
     Route::get('/projects', function () {
         return view('Back-End.Home-Page.projects.add_prjects');
     });
+    Route::post('/add_projects',[ProjectController::class,'add_projects'])->name('add_projects');
 
     /*+++++++++++++++++++++++++++++++ End  the HomePage Routs +++++++++++++++++++++++++++*/
 });
