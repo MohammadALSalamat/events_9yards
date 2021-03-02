@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Tue Mar 02 2021 12:48:57 GMT+0400 (Gulf Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/FrontIndexController.php
+* app/Http/Controllers/LeadingPageController.php
+* "resources/views/Back-End/Home-Page/Leading page/view_leading_page.blade.php"
+* resources/views/layouts/front-layout/leadingpage.blade.php
+
+
+Created files:
+* .autogit/logs/log-2-2-2021-12-18-16.txt
+
+
+Deleted files:
+
+
+Renamed files:

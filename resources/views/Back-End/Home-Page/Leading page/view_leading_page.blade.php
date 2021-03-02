@@ -88,7 +88,7 @@
                                         @foreach ($leading_page_info as $user)
                                             <tr>
                                                 <td>{{ $user->id }}</td>
-                                                <td>{{ $user->top_title }}</td>
+                                                <td>{{ $user->title }}</td>
                                                 <td style="width:30% !important">{{ $user->paragraph }}</td>
                                                 <td>
                                                     @if ($user->Status == 1)

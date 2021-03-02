@@ -14,6 +14,8 @@ use App\Models\Information;
 use Illuminate\Support\Facades\Mail;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
+use function Ramsey\Uuid\v1;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -82,6 +84,11 @@ Route::group(['middleware' => ['admin']], function () {
     // leading page
     Route::get('/View_leading_page', [LeadingPageController::class , 'View_leading_page'])->name('View_leading_page');
     Route::match(['get', 'post'],'/Update_leading_page/{id}',[LeadingPageController::class,'ChnageTextLeangingPage'])->name('Edit_leading_page');
+
+    //prjects
+    Route::get('/projects', function () {
+        return view('Back-End.Home-Page.projects.add_prjects');
+    });
 
     /*+++++++++++++++++++++++++++++++ End  the HomePage Routs +++++++++++++++++++++++++++*/
 });
