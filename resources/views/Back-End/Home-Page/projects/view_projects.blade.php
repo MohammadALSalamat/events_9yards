@@ -97,9 +97,9 @@
                                      @foreach ($images as $image)
                                     <tr>
                                         <td>{{ $image->id }}</td>
-                                        @foreach ($image as $item)
+                                        @foreach ($image as $key->$item)
                                         <td>
-                                            <img src="{{ asset('img/projects/'.$image->Images) }}" width="50px" height="50px" alt="">
+                                            <img src="{{ asset('img/projects/'.$item->Images) }}" width="50px" height="50px" alt="">
                                         </td>
                                         <td style="width: 20% !important">
                                             <a><button id="myBtn" style="width: 100% !important" type="button"
