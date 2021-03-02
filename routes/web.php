@@ -81,6 +81,7 @@ Route::group(['middleware' => ['admin']], function () {
 
     // leading page
     Route::get('/View_leading_page', [LeadingPageController::class , 'View_leading_page'])->name('View_leading_page');
+    Route::match(['get', 'post'],[LeadingPageController::class,'ChnageTextLeangingPage'])->name('Edit_leading_page');
 
     /*+++++++++++++++++++++++++++++++ End  the HomePage Routs +++++++++++++++++++++++++++*/
 });
