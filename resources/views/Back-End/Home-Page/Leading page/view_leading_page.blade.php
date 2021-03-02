@@ -91,7 +91,7 @@
                                                 <td>{{ $user->top_title }}</td>
                                                 <td style="width:30% !important">{{ $user->paragraph }}</td>
                                                 <td>
-                                                    @if ($user->status == 1)
+                                                    @if ($user->Status == 1)
                                                         <span style="color:green"> Active</span>
                                                     @else
                                                         <span style="color:red"> Not Active</span>

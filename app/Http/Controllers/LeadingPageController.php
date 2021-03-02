@@ -35,14 +35,13 @@ class LeadingPageController extends Controller
         }else{
             $status = 1;
         }
-        dd($data);
         // upgrade our database
         leadingPage::where('id',$id)->update([
             'title'=>$data['top_title'],
             'paragraph'=>$data['description'],
             'Status'=>$status
         ]);
-        Toastr::success('Sorry , your Data must be not empty)', 'Success');
-            return back();
+        Toastr::success('Congrats, your data has been updated ', 'Success');
+        return back();
     }
 }

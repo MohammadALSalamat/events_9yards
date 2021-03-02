@@ -6,6 +6,7 @@ use App\Models\FrontUser;
 use App\Models\headerSection;
 use App\Models\headerSlideshowSection;
 use App\Models\HomePage;
+use App\Models\leadingPage;
 use Illuminate\Http\Request;
 
 class FrontIndexController extends Controller
@@ -44,7 +45,8 @@ class FrontIndexController extends Controller
         $logo_detaile = HomePage::first(); // logo
         $headerTitles = headerSection::first(); // get the titles
         $headerSlideShows = headerSlideshowSection::get(); // get the slideShow images
-        return view('layouts.front-layout.main_desgin', compact('CurrentUser', "logo_detaile", "headerTitles", "headerSlideShows"));
+        $leading_info = leadingPage::first();
+        return view('layouts.front-layout.main_desgin', compact('CurrentUser', "logo_detaile", "headerTitles", "headerSlideShows","leading_info"));
     }
 
 
@@ -58,6 +60,7 @@ class FrontIndexController extends Controller
     public function new_data(Request $request)
     {
         $CurrentUser = FrontUser::where(['name' => $request->session()->get('FrontUserID')])->first();
+
 
         #show the email page
         return view('Front-End.data.insert_newdata', compact('CurrentUser'));
