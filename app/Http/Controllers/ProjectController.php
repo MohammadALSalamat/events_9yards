@@ -13,7 +13,8 @@ class ProjectController extends Controller
 public function view_projects()
 {
     #get the projects view
-    return view('Back-End.Home-Page.projects.view_projects');
+    $images = Project::get();
+    return view('Back-End.Home-Page.projects.view_projects',compact('images'));
 }
 
     //add projects
@@ -23,7 +24,8 @@ public function view_projects()
         # add projects
         if($request->hasFile('filename')){
             foreach($request->file('filename') as $image){
-                $name = $image->getClientOriginalName();
+                $extentions = $image->clientExtension();
+                $name = rand(1, 10000000) . '.' . $extentions;
                 $image->move(public_path().'/img/projects/',$name); //file Name
                 $data[] =$name;
             }

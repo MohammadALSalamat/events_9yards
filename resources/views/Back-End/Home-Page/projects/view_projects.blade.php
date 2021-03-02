@@ -73,6 +73,7 @@
         </div><!-- /.container-fluid -->
     </section>
     <!-- Main content -->
+    <button class="btn btn-primary" id="myBtn"><i class="fa fa-plus"></i></button>
     <section class="content">
         <div class="container-fluid">
             <div class="row">
@@ -93,17 +94,12 @@
                                     </tr>
                                 </thead>
                                 <tbody style="line-height: 4 !important;">
-                                    {{-- @foreach ($leading_page_info as $user)
-                                    {{-- <tr>
-                                        <td>{{ $user->id }}</td>
-                                        <td>{{ $user->title }}</td>
-                                        <td style="width:30% !important">{{ $user->paragraph }}</td>
+                                     @foreach ($images as $image)
+                                    <tr>
+                                        <td>{{ $image->id }}</td>
+                                        @foreach ($image as $item)
                                         <td>
-                                            @if ($user->Status == 1)
-                                            <span style="color:green"> Active</span>
-                                            @else
-                                            <span style="color:red"> Not Active</span>
-                                            @endif
+                                            <img src="{{ asset('img/projects/'.$image->Images) }}" width="50px" height="50px" alt="">
                                         </td>
                                         <td style="width: 20% !important">
                                             <a><button id="myBtn" style="width: 100% !important" type="button"
@@ -111,7 +107,11 @@
                                                         aria-hidden="true"></i>
                                                     Modify</button></a>
                                         </td>
-                                    </tr> --}}
+
+                                        @endforeach
+
+                                    </tr>
+                                    @endforeach
                                 </tbody>
 
                             </table>
@@ -138,7 +138,7 @@
             <!-- /.container-fluid -->
         </section>
 
-        {{-- <!-- Main content -->
+       <!-- Main content -->
         <section class="content">
             <div class="container-fluid">
                 <div class="row">
@@ -151,39 +151,24 @@
                             </div>
                             <!-- /.card-header -->
                             <!-- form start -->
-                            <form id="quickForm" action="{{ route('Edit_leading_page',$titles_info->id) }}"
-                                method="post" enctype="multipart/form-data">
+                            <form method="post" action="{{route('add_projects')}}" enctype="multipart/form-data">
                                 @csrf
-                                <div class="card-body">
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">Top Title</label>
-                                        <input type="text" name="top_title" class="form-control" id="exampleInputEmail1"
-                                            placeholder="Eg: Mohammad , Alis ,Alex ,etc...."
-                                            value="{{ $titles_info->title }}" required>
+                                    <div class="input-group control-group increment" >
+                                      <input type="file" name="filename[]" class="form-control">
+                                      <div class="input-group-btn">
+                                        <button class="btn btn-success" type="button"><i class="glyphicon glyphicon-plus"></i>Add</button>
+                                      </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail3">paragraph</label>
-                                        <textarea name="description" id="" class="form-control" id="exampleInputEmail3"
-                                            cols="30" rows="10" required>{{ $titles_info->paragraph}}</textarea>
-
-                                    </div>
-                                    <div class="form-group">
-                                        <div
-                                            class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
-                                            <input type="checkbox" class="custom-control-input" id="customSwitch3"
-                                                name="status" @if ($titles_info->Status == 1)
-                                            checked
-                                            @endif >
-                                            <label class="custom-control-label" for="customSwitch3">Once You Toggle this
-                                                button then you agree to Active the leading Title </label>
+                                    <div class="clone hide">
+                                      <div class="control-group input-group" style="margin-top:10px">
+                                        <input type="file" name="filename[]" class="form-control">
+                                        <div class="input-group-btn">
+                                          <button class="btn btn-danger" type="button"><i class="glyphicon glyphicon-remove"></i> Remove</button>
                                         </div>
+                                      </div>
                                     </div>
-                                </div>
-                                <!-- /.card-body -->
-                                <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary">Edit Titles</button>
-                                </div>
-                            </form>
+                                    <button type="submit" class="btn btn-info" style="margin-top:12px"><i class="glyphicon glyphicon-check"></i> Submit</button>
+                              </form>
                         </div>
                         <!-- /.card -->
                     </div>
@@ -194,7 +179,7 @@
             </div>
             <!-- /.container-fluid -->
         </section>
-        <!-- /.content --> --}}
+        <!-- /.content -->
     </div>
 
 </div>
