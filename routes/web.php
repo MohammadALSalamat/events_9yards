@@ -87,9 +87,7 @@ Route::group(['middleware' => ['admin']], function () {
     Route::match(['get', 'post'],'/Update_leading_page/{id}',[LeadingPageController::class,'ChnageTextLeangingPage'])->name('Edit_leading_page');
 
     //prjects
-    Route::get('/projects', function () {
-        return view('Back-End.Home-Page.projects.add_prjects');
-    });
+    Route::get('View-Projects',[ProjectController::class,'view_projects'])->name('view_projects');
     Route::post('/add_projects',[ProjectController::class,'add_projects'])->name('add_projects');
 
     /*+++++++++++++++++++++++++++++++ End  the HomePage Routs +++++++++++++++++++++++++++*/

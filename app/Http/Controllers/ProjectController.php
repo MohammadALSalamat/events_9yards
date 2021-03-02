@@ -3,29 +3,31 @@
 namespace App\Http\Controllers;
 
 use App\Models\Project;
-use Brian2694\Toastr\Toastr;
+use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
 {
+
+//view projects
+public function view_projects()
+{
+    #get the projects view
+    return view('Back-End.Home-Page.projects.view_projects');
+}
+
     //add projects
 
     public function add_projects(Request $request)
     {
         # add projects
-        $this->validate($request,[
-            'filename'=>'required',
-            'filename'=>'image|mimes:jpg,png,gif,svg'
-        ]);
-        dd($request->all());
         if($request->hasFile('filename')){
             foreach($request->file('filename') as $image){
-                $name = $image->getClientOrginalName();
+                $name = $image->getClientOriginalName();
                 $image->move(public_path().'/img/projects/',$name); //file Name
                 $data[] =$name;
             }
         }
-        dd($name);
         //insert the data
         $uplode_model = new Project();
         $uplode_model->Images =json_encode($data);

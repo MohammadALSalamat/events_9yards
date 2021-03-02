@@ -3,7 +3,7 @@
 <div style="margin-left:300px ">
 <h3 class="jumbotron"><i class="glyphicon glyphicon-upload"></i> Laravel Multiple File Upload</h3>
 <form method="post" action="{{route('add_projects')}}" enctype="multipart/form-data">
-  {{csrf_field()}}
+    @csrf
         <div class="input-group control-group increment" >
           <input type="file" name="filename[]" class="form-control">
           <div class="input-group-btn">

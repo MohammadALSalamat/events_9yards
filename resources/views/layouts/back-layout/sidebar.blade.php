@@ -84,21 +84,30 @@
                                 <p>Leading Page Sections</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href=" #" class="nav-link">
+                                <i class="fas fa-code-branch"></i>
+                                <p>
+                                    Projects Section
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('view_projects') }}" class="nav-link ">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>View Projects</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('view_projects') }}" class="nav-link ">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Add Projects</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
-                </li>
-                <li class="nav-header">Categories Section</li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="fas fa-circle nav-icon"></i>
-                        <p>Category</p>
-                    </a>
-                </li>
-                <li class="nav-header">Order Section</li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon far fa-circle text-danger"></i>
-                        <p class="text">Order</p>
-                    </a>
                 </li>
 
             </ul>
@@ -107,8 +116,3 @@
     </div>
     <!-- /.sidebar -->
 </aside>
-
-
-
-
-
