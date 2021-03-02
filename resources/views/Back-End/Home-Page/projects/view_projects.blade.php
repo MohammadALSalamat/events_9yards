@@ -94,7 +94,7 @@
                                     </tr>
                                 </thead>
                                 <tbody style="line-height: 4 !important;">
-                                     @foreach ($images as $image)
+                                     {{-- @foreach ($images as $image)
                                     <tr>
                                         <td>{{ $image->id }}</td>
                                         @foreach ($image as $key->$item)
@@ -111,7 +111,7 @@
                                         @endforeach
 
                                     </tr>
-                                    @endforeach
+                                    @endforeach --}}
                                 </tbody>
 
                             </table>
@@ -222,6 +222,16 @@
             modal.style.display = "none";
         }
     }
+    $(document).ready(function() {
+      $(".btn-success").click(function(){
+          var html = $(".clone").html();
+          $(".increment").after(html);
+      });
+      $("body").on("click",".btn-danger",function(){
+          $(this).parents(".control-group").remove();
+      });
+    });
+
     $(function() {
         $("#example1").DataTable({
             "responsive": true,

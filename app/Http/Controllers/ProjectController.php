@@ -13,9 +13,10 @@ class ProjectController extends Controller
 public function view_projects()
 {
     #get the projects view
-    $images = Project::first();
-    $single_iame = explode(' ' ,$images-> Images );
-    dd($images-> Images);
+    $images = Project::first()->toArray();
+
+
+    dd($images);
 
     return view('Back-End.Home-Page.projects.view_projects',compact('images'));
 }
