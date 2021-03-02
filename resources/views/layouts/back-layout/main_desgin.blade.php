@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="{{ url('admin-style/plugins/summernote/summernote-bs4.min.css') }}">
     <!-- dropzonejs -->
     <link rel="stylesheet" href="{{ url('admin-style/plugins/dropzone/min/dropzone.min.css') }}">
+
     <!-- Toastr -->
     <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
@@ -112,6 +113,7 @@
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="{{ url('admin-style/dist/js/pages/dashboard.js') }}"></script>
     <!-- here to add extra links from other pages -->
+    <script src="{{ url('js/main.js') }}"></script>
     <!-- dropzonejs -->
     <script src="{{ url('admin-style/plugins/dropzone/min/dropzone.min.js') }}"></script>
     <!-- Toastr -->

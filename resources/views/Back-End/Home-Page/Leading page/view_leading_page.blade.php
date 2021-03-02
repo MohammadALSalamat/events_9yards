@@ -179,22 +179,8 @@
     <div class="modal-content">
       <span class="close">&times;</span>
        <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
-            <div class="container-fluid">
-                <div class="mb-2 row">
-                    <div class="col-sm-6">
-                        <h1>Edit Header Titles</h1>
-                    </div>
-                    <div class="col-sm-6">
-                        <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Home</a></li>
-                            <li class="breadcrumb-item active">Edit Header Titles</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
             <!-- /.container-fluid -->
         </section>
 
@@ -222,8 +208,8 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail3">paragraph</label>
-                                        <input type="text" name="description" class="form-control" id="exampleInputEmail3"
-                                            placeholder="Eg: Mohammad , Alis ,Alex ,etc...." value="{{ $titles_info->paragraph}}" required>
+                                        <textarea name="description" id=""class="form-control" id="exampleInputEmail3" cols="30" rows="10" required>{{ $titles_info->paragraph}}</textarea>
+
                                     </div>
                                     <div class="form-group">
                                         <div
@@ -253,7 +239,6 @@
             <!-- /.container-fluid -->
         </section>
         <!-- /.content -->
-    </div>
     </div>
 
 </div>
