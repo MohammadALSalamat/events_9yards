@@ -33,7 +33,7 @@
                             </div>
                             <!-- /.card-header -->
                             <!-- form start -->
-                            <form id="quickForm" action="{{ route('insert_slider_image') }}" method="post"
+                            <form id="quickForm" action="{{ route('update_Project',[$Projects->id,$item]  ) }}" method="post"
                                 enctype="multipart/form-data">
                                 @csrf
                                 <div class="card-body">

@@ -53,14 +53,17 @@ public function view_projects()
 
     public function update_Project(Request $request,$id,$item)
     {
+        // dd($request->all());
         $Projects = Project::where('id',$id)->first();
+
         //check the array if there is any value then change it
         $checkifImage = Str::contains($Projects->Images, $item);
         if($checkifImage == true){
         foreach (json_decode($Projects->Images) as $test){
+            dd($test );
             if($test == $item){
                 Project::where(['id'=>$id])->update([
-                    $test =>$item
+                    $test => $item
                 ]);
             }
         }
