@@ -41,7 +41,8 @@
                                     <img src="{{ asset('img/projects/'.$item) }}" alt="{{ $item }}" width="200px" height="200px">
                                     <div class="form-group pt-12">
                                         <label for="exampleInputavater">Update Image</label>
-                                        <input type="file" name="avatar" class="form-control" id="exampleInputavatar">
+                                        <input type="hidden" name="Current_Iamge" value="{{ $item }}">
+                                        <input type="file" name="filename" class="form-control" id="exampleInputavatar">
                                     </div>
                                 </div>
                                 <!-- /.card-body -->

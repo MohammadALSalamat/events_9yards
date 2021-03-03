@@ -53,17 +53,31 @@ public function view_projects()
 
     public function update_Project(Request $request,$id,$item)
     {
-        // dd($request->all());
+         # add projects
+         if($request->hasFile('filename')){
+            foreach($request->file('filename') as $image){
+                $extentions = $image->clientExtension();
+                $name = rand(1, 10000000) . '.' . $extentions;
+                $image->move(public_path().'/img/projects/',$name); //file Name
+                $data[] =$name;
+            }
+        }else{
+            Toastr::error('can not update this image until you insert new data', 'Error');
+            return back();
+
+        }
+        //insert the da
         $Projects = Project::where('id',$id)->first();
 
         //check the array if there is any value then change it
         $checkifImage = Str::contains($Projects->Images, $item);
         if($checkifImage == true){
         foreach (json_decode($Projects->Images) as $test){
-            dd($test );
             if($test == $item){
+                $replace = str_replace($test,json_encode($data) ,json_decode($Projects->Images) );
+                dd($replace);
                 Project::where(['id'=>$id])->update([
-                    $test => $item
+                    'Images' => $replace
                 ]);
             }
         }
