@@ -22,8 +22,8 @@ public function view_projects()
     public function add_projects(Request $request)
     {
         # add projects
-        if($request->hasFile('image')){
-            foreach($request->file('image') as $image){
+        if($request->hasFile('filename')){
+            foreach($request->file('filename') as $image){
                 $extentions = $image->clientExtension();
                 $name = rand(1, 10000000) . '.' . $extentions;
                 $image->move(public_path().'/img/projects/',$name); //file Name
@@ -36,5 +36,14 @@ public function view_projects()
         $uplode_model->save();
         Toastr::success('Congrats, your data has been updated ', 'Success');
         return back();
+    }
+
+    // view edite single image
+
+    public function Edite_Project(Request $request,$id,$item)
+    {
+        $Projects = Project::where('id',$id)->first();
+        dd($Projects->images);
+
     }
 }

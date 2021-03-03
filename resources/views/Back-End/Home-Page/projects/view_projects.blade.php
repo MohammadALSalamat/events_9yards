@@ -89,8 +89,6 @@
                                     <tr style="text-align: center;">
                                         <th>#ID</th>
                                         <th>Images</th>
-                                        <th>Status</th>
-                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody style="line-height: 4 !important;">
@@ -102,7 +100,7 @@
                                             <img src="{{ asset('img/projects/'.$item) }}" width="50px" height="50px" alt="">
                                         </td>
                                         <td style="width: 20% !important">
-                                            <a href="/edite/{{ $item }}"><button id="myBtn" style="width: 100% !important" type="button"
+                                            <a href="{{ route('Edite_Project',[$image->id,$item]  ) }}"><button id="myBtn" style="width: 100% !important" type="button"
                                                     class="btn btn-outline-primary btn-md"><i class="fa fa-pencil"
                                                         aria-hidden="true"></i>
                                                     Modify</button></a>

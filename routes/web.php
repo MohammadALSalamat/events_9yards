@@ -89,6 +89,7 @@ Route::group(['middleware' => ['admin']], function () {
     //prjects
     Route::get('View-Projects',[ProjectController::class,'view_projects'])->name('view_projects');
     Route::post('/add_projects',[ProjectController::class,'add_projects'])->name('add_projects');
+    Route::get('/Edite_Project/{id}/{item}',[ProjectController::class,'Edite_Project'])->name('Edite_Project');
 
     /*+++++++++++++++++++++++++++++++ End  the HomePage Routs +++++++++++++++++++++++++++*/
 });

@@ -9,7 +9,7 @@
                     @foreach ($Projects as $image)
                     <div class="col-3">
                             @foreach (json_decode($image->Images) as $item)
-                                <img src="{{ asset('img/projects/'.$item) }}"  alt="{{ $item }}">
+                                <img src="{{ asset('img/projects/'.$item) }}"  alt="{{ $item }}" style="padding-bottom: 15px">
                             @endforeach
                         </div>
                         @endforeach
