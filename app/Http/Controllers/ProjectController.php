@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Project;
 use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+
 
 class ProjectController extends Controller
 {
@@ -43,7 +45,18 @@ public function view_projects()
     public function Edite_Project(Request $request,$id,$item)
     {
         $Projects = Project::where('id',$id)->first();
-        dd($Projects->images);
+        //check the array if there is any value then change it
+        $checkifImage = Str::contains($Projects->Images, $item);
+        if($checkifImage == true){
+        foreach (json_decode($Projects->Images) as $test){
+            if($test == $item){
+                dd($test);
+            }
+        }
+        }else{
+            Toastr::error('Sorry This Image is not Exists', 'Error');
+        return back();
+        }
 
     }
 }
