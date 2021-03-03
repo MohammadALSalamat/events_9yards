@@ -37,8 +37,9 @@
                                 enctype="multipart/form-data">
                                 @csrf
                                 <div class="card-body">
-                                    <img src="{{ asset('img/projects/'.$item) }}" alt="$item" srcset="$item">
-                                    <div class="form-group">
+                                    <h4>Current Image</h4>
+                                    <img src="{{ asset('img/projects/'.$item) }}" alt="{{ $item }}" width="200px" height="200px">
+                                    <div class="form-group pt-12">
                                         <label for="exampleInputavater">Update Image</label>
                                         <input type="file" name="avatar" class="form-control" id="exampleInputavatar">
                                     </div>

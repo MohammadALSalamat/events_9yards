@@ -47,16 +47,26 @@ public function view_projects()
         $Projects = Project::where('id',$id)->first();
         //check the array if there is any value then change it
         $checkifImage = Str::contains($Projects->Images, $item);
+    return view('Back-End\Home-Page\projects\Edit_Single_project',compact('item','Projects'));
+    }
+
+
+    public function update_Project(Request $request,$id,$item)
+    {
+        $Projects = Project::where('id',$id)->first();
+        //check the array if there is any value then change it
+        $checkifImage = Str::contains($Projects->Images, $item);
         if($checkifImage == true){
-        // foreach (json_decode($Projects->Images) as $test){
-        //     if($test == $item){
-        //         dd($test);
-        //     }
-        // }
+        foreach (json_decode($Projects->Images) as $test){
+            if($test == $item){
+                Project::where(['id'=>$id])->update([
+                    $test =>$item
+                ]);
+            }
+        }
         }else{
             Toastr::error('Sorry This Image is not Exists', 'Error');
         return back();
         }
-return view('Back-End\Home-Page\projects\Edit_Single_project',compact('item'));
     }
 }
