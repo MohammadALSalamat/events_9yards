@@ -100,7 +100,7 @@
                                             <img src="{{ asset('img/projects/'.$item) }}" width="50px" height="50px" alt="">
                                         </td>
                                         <td style="width: 20% !important">
-                                            <a ><button id="myBtn1"  style="width: 100% !important" type="button"
+                                            <a href="{{ route('Edite_Project',[$image->id,$item]  ) }}"><button id="myBtn1" style="width: 100% !important" type="button"
                                                     class="btn btn-outline-primary btn-md"><i class="fa fa-pencil"
                                                         aria-hidden="true"></i>
                                                     Modify</button></a>
@@ -180,51 +180,6 @@
     </div>
 
 </div>
-<div id="myModal1" class="modal">
-    <!-- Modal content -->
-    <div class="modal-content">
-        <span class="close1">&times;</span>
-        <!-- Content Wrapper. Contains page content -->
-        <!-- Content Header (Page header) -->
-        <section class="content-header">
-            <!-- /.container-fluid -->
-        </section>
-
-       <!-- Main content -->
-        <section class="content">
-            <div class="container-fluid">
-                <div class="row">
-                    <!-- left column -->
-                    <div class="col-md-12">
-                        <!-- jquery validation -->
-                        <div class="card card-primary">
-                            <div class="card-header">
-                                <h3 class="card-title">Form To <small> Edit Header Titles</small></h3>
-                            </div>
-                            <!-- /.card-header -->
-                            <!-- form start -->
-                            <form method="post" action="{{route('add_projects')}}" enctype="multipart/form-data">
-                                @csrf
-                                    <div class="input-group control-group increment" >
-                                      <input type="file" name="filename" class="form-control">
-
-                                    </div>
-                                    <button type="submit" class="btn btn-info" style="margin-top:12px"><i class="glyphicon glyphicon-check"></i> Submit</button>
-                              </form>
-                        </div>
-                        <!-- /.card -->
-                    </div>
-                    <!--/.col (left) -->
-                    <!--/.col (right) -->
-                </div>
-                <!-- /.row -->
-            </div>
-            <!-- /.container-fluid -->
-        </section>
-        <!-- /.content -->
-    </div>
-
-</div>
 @endsection
 
 @section('script')
@@ -274,27 +229,6 @@
       });
     });
 
-
-     // Get the modal
-     var modal = document.getElementById("myModal1");
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn1");
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close1")[0];
-    // When the user clicks the button, open the modal
-    btn.onclick = function() {
-        modal.style.display = "block";
-    }
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
     $(function() {
         $("#example1").DataTable({
             "responsive": true,
