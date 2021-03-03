@@ -7,6 +7,7 @@ use App\Models\headerSection;
 use App\Models\headerSlideshowSection;
 use App\Models\HomePage;
 use App\Models\leadingPage;
+use App\Models\Project;
 use Illuminate\Http\Request;
 
 class FrontIndexController extends Controller
@@ -45,8 +46,9 @@ class FrontIndexController extends Controller
         $logo_detaile = HomePage::first(); // logo
         $headerTitles = headerSection::first(); // get the titles
         $headerSlideShows = headerSlideshowSection::get(); // get the slideShow images
-        $leading_info = leadingPage::first();
-        return view('layouts.front-layout.main_desgin', compact('CurrentUser', "logo_detaile", "headerTitles", "headerSlideShows","leading_info"));
+        $leading_info = leadingPage::first();//leading page section
+        $Projects = Project::with(['project'])->get();
+        return view('layouts.front-layout.main_desgin', compact('CurrentUser', "logo_detaile", "headerTitles", "headerSlideShows","leading_info","Projects"));
     }
 
 

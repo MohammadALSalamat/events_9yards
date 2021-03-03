@@ -94,15 +94,15 @@
                                     </tr>
                                 </thead>
                                 <tbody style="line-height: 4 !important;">
-                                     {{-- @foreach ($images as $image)
+                                     @foreach ($Projects as $image)
                                     <tr>
                                         <td>{{ $image->id }}</td>
-                                        @foreach ($image as $key->$item)
+                                        @foreach (json_decode($image->Images) as $item)
                                         <td>
-                                            <img src="{{ asset('img/projects/'.$item->Images) }}" width="50px" height="50px" alt="">
+                                            <img src="{{ asset('img/projects/'.$item) }}" width="50px" height="50px" alt="">
                                         </td>
                                         <td style="width: 20% !important">
-                                            <a><button id="myBtn" style="width: 100% !important" type="button"
+                                            <a href="/edite/{{ $item }}"><button id="myBtn" style="width: 100% !important" type="button"
                                                     class="btn btn-outline-primary btn-md"><i class="fa fa-pencil"
                                                         aria-hidden="true"></i>
                                                     Modify</button></a>
@@ -111,7 +111,7 @@
                                         @endforeach
 
                                     </tr>
-                                    @endforeach --}}
+                                    @endforeach
                                 </tbody>
 
                             </table>

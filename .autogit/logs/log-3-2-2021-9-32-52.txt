@@ -1,0 +1,23 @@
+-------------------- Auto-Git Log --------------------
+		Wed Mar 03 2021 09:32:52 GMT+0400 (Gulf Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/ProjectController.php
+* app/Models/Project.php
+
+
+Created files:
+* .autogit/logs/log-2-2-2021-17-19-50.txt
+* public/img/projects/249108.jpeg
+* public/img/projects/4838125.jpeg
+* public/img/projects/5530769.jpeg
+* public/img/projects/6385723.jpeg
+* public/img/projects/7933437.jpeg
+* resources/views/Back-End/Home-Page/projects/test.blade.php
+
+
+Deleted files:
+
+
+Renamed files:

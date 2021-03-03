@@ -10,6 +10,6 @@ class Project extends Model
     use HasFactory;
     public function project()
     {
-        return $this->hasMany(Model::class, 'prod_id');
+        return $this->hasMany(project::class, 'id');
     }
 }
