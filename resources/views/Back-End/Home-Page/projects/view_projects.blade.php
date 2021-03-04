@@ -95,7 +95,7 @@
                                      @foreach ($Projects as $image)
                                     <tr>
                                         <td>{{ $image->id }}</td>
-                                        @foreach (json_decode($image->Images) as $item)
+                                        @foreach ((array)json_decode($image->Images) as $item)
                                         <td>
                                             <img src="{{ asset('img/projects/'.$item) }}" width="50px" height="50px" alt="">
                                         </td>

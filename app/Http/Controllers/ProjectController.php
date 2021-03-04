@@ -72,9 +72,9 @@ public function view_projects()
         //check the array if there is any value then change it
         $checkifImage = Str::contains($Projects->Images, $item);
         if($checkifImage == true){
-        foreach (json_decode($Projects->Images) as $test){
+        foreach ((array)json_decode($Projects->Images) as $test){
             if($test == $item){
-                $replace = str_replace($test,json_encode($data) ,json_decode($Projects->Images) );
+                $replace = str_replace($test,(array)json_encode($data) ,(array)json_decode($Projects->Images) );
                 dd($replace);
                 Project::where(['id'=>$id])->update([
                     'Images' => $replace
