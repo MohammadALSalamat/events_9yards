@@ -62,9 +62,16 @@ public function view_projects()
                 $extentions = $image->clientExtension();
                 $Newname = rand(1, 10000000) . '.' . $extentions;
                 $image->move(public_path().'/img/projects/',$Newname); //file Name
-                $data[]= $Newname;
-                $array2 =(array)json_decode($data);
-                dd($array2);
+                $data= $Newname;
+                $checkifImage = Str::contains($Projects->Images, $item);
+                if ($checkifImage == true) {
+                    foreach ((array)json_decode($Projects->Images) as $key=> $test) {
+                        if ($test == $item) {
+                            $repl = str_replace($item, $data);
+                            dd($repl);
+                        }
+                    }
+                }
             }
         }else{
             Toastr::error('can not update this image until you insert new data', 'Error');
@@ -72,19 +79,12 @@ public function view_projects()
 
         }
         $array1 = (array)json_decode($Projects->Images);
-        dd($array1);
-        //check the array if there is any value then change it
         $checkifImage = Str::contains($Projects->Images, $item);
+        //check the array if there is any value then change it
         if($checkifImage == true){
-        foreach ((array)json_decode($Projects->Images) as $test){
+        foreach ((array)json_decode($Projects->Images) as $key=> $test){
             if($test == $item){
-                $test1 = Project::where(['id'=>$id])->array('Images');
-                dd($test1);
-                // // $replace = str_replace($test,(array)json_encode($data) ,(array)json_decode($Projects->Images) );
-                // dd($replace);
-                // Project::where(['id'=>$id])->update([
-                //     'Images' => $replace
-                // ]);
+                $repl = array_replace($test);
             }
         }
         }else{
