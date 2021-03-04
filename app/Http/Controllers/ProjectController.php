@@ -82,7 +82,7 @@ public function view_projects()
             }
         }
         }else{
-            Toastr::error('Sorry This Image is not Exists', 'Error');
+        Toastr::error('Sorry This Image is not Exists', 'Error');
         return back();
         }
     }

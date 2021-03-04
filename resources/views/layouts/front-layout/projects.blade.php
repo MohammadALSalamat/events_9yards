@@ -7,12 +7,14 @@
                 <div class="row">
                     <!-- this section is to show all th project s from the database -->
                     @foreach ($Projects as $image)
+                    @if (is_array($image) || is_object($image))
                     <div class="col-3">
-                            @foreach (json_decode($image->Images) as $item)
-                                <img src="{{ asset('img/projects/'.$item) }}"  alt="{{ $item }}" style="padding-bottom: 15px">
-                            @endforeach
-                        </div>
+                        @foreach (json_decode($image->Images) as $item)
+                        <img src="{{ asset('img/projects/'.$item) }}" alt="{{ $item }}" style="padding-bottom: 15px">
                         @endforeach
+                    </div>
+                    @endif
+                    @endforeach
                 </div>
             </section>
             <div class="overlay1">
