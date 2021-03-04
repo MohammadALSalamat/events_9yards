@@ -42,7 +42,7 @@
                                     <div class="form-group pt-12">
                                         <label for="exampleInputavater">Update Image</label>
                                         <input type="hidden" name="Current_Iamge" value="{{ $item }}">
-                                        <input type="file" name="filename" class="form-control" id="exampleInputavatar">
+                                        <input type="file" name="filename[]" class="form-control" id="exampleInputavatar">
                                     </div>
                                 </div>
                                 <!-- /.card-body -->
