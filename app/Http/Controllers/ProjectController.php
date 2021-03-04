@@ -57,13 +57,14 @@ public function view_projects()
 
         # add projects
         if($request->hasFile('filename')){
-            foreach($request->file('filename') as $image){
-                dd($request->all());
+            if($request->file('filename')->isValid()){
+                $image = $request->file('filename');
                 $extentions = $image->clientExtension();
                 $Newname = rand(1, 10000000) . '.' . $extentions;
                 $image->move(public_path().'/img/projects/',$Newname); //file Name
                 $data[]= $Newname;
                 $array2 =(array)json_decode($data);
+                dd($array2);
             }
         }else{
             Toastr::error('can not update this image until you insert new data', 'Error');
@@ -71,7 +72,7 @@ public function view_projects()
 
         }
         $array1 = (array)json_decode($Projects->Images);
-        dd($array2);
+        dd($array1);
         //check the array if there is any value then change it
         $checkifImage = Str::contains($Projects->Images, $item);
         if($checkifImage == true){
