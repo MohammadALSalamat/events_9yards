@@ -59,6 +59,7 @@ public function view_projects()
         if($request->hasFile('filename')){
             if($request->file('filename')->isValid()){
                 $image = $request->file('filename');
+                dd($image);
                 $extentions = $image->clientExtension();
                 $Newname = rand(1, 10000000) . '.' . $extentions;
                 $image->move(public_path().'/img/projects/',$Newname); //file Name
@@ -67,8 +68,8 @@ public function view_projects()
                 if ($checkifImage == true) {
                     foreach ((array)json_decode($Projects->Images) as $key=> $test) {
                         if ($test == $item) {
-                            $repl = str_replace($item, $data);
-                            dd($repl);
+                            // $repl = str_replace($item, $data);
+                            // dd($repl);
                         }
                     }
                 }
