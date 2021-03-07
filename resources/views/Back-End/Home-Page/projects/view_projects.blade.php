@@ -73,7 +73,10 @@
         </div><!-- /.container-fluid -->
     </section>
     <!-- Main content -->
-    <button class="btn btn-primary" id="myBtn"><i class="fa fa-plus"></i></button>
+
+    <button type="button"  class="btn btn-outline-success btn-md" id="myBtn" style="    margin-bottom: 10px;
+    padding: 8px 40px;
+    margin-left: 16px;" title=" add new image"><i class="fa fa-plus"></i></button><!-- This button to add new image to sections -->
     <section class="content">
         <div class="container-fluid">
             <div class="row">
@@ -88,6 +91,7 @@
                                 <thead>
                                     <tr style="text-align: center;">
                                         <th>#ID</th>
+                                        <th>Section</th>
                                         <th>Images</th>
                                     </tr>
                                 </thead>
@@ -95,12 +99,13 @@
                                      @foreach ($Projects as $image)
                                     <tr>
                                         <td>{{ $image->id }}</td>
-                                        @foreach ((array)json_decode($image->Images) as $item)
+                                        <td>{{ $image->name }}</td>
+                                        @foreach ($image->projectImages as $item)
                                         <td>
-                                            <img src="{{ asset('img/projects/'.$item) }}" width="50px" height="50px" alt="">
+                                            <img src="{{ asset('img/projects/'.$item->Image) }}" width="50px" height="50px" alt="">
                                         </td>
                                         <td style="width: 20% !important">
-                                            <a href="{{ route('Edite_Project',[$image->id,$item]  ) }}"><button id="myBtn1" style="width: 100% !important" type="button"
+                                            <a href="{{ route('Edite_Project',$item->id  ) }}"><button id="myBtn1" style="width: 100% !important" type="button"
                                                     class="btn btn-outline-primary btn-md"><i class="fa fa-pencil"
                                                         aria-hidden="true"></i>
                                                     Modify</button></a>
@@ -136,46 +141,76 @@
         </section>
 
        <!-- Main content -->
-        <section class="content">
-            <div class="container-fluid">
-                <div class="row">
-                    <!-- left column -->
-                    <div class="col-md-12">
-                        <!-- jquery validation -->
-                        <div class="card card-primary">
-                            <div class="card-header">
-                                <h3 class="card-title">Form To <small> Edit Header Titles</small></h3>
-                            </div>
-                            <!-- /.card-header -->
-                            <!-- form start -->
-                            <form method="post" action="{{route('add_projects')}}" enctype="multipart/form-data">
-                                @csrf
-                                    <div class="input-group control-group increment" >
-                                      <input type="file" name="filename[]" class="form-control">
-                                      <div class="input-group-btn">
-                                        <button class="btn btn-success" type="button"><i class="glyphicon glyphicon-plus"></i>Add</button>
-                                      </div>
-                                    </div>
-                                    <div class="clone hide">
-                                      <div class="control-group input-group" style="margin-top:10px">
-                                        <input type="file" name="filename[]" class="form-control">
-                                        <div class="input-group-btn">
-                                          <button class="btn btn-danger" type="button"><i class="glyphicon glyphicon-remove"></i> Remove</button>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <button type="submit" class="btn btn-info" style="margin-top:12px"><i class="glyphicon glyphicon-check"></i> Submit</button>
-                              </form>
-                        </div>
-                        <!-- /.card -->
-                    </div>
-                    <!--/.col (left) -->
-                    <!--/.col (right) -->
+       <section class="content-header">
+        <div class="container-fluid">
+            <div class="mb-2 row">
+                <div class="col-sm-6">
+                    <h1>Add Sliders</h1>
                 </div>
-                <!-- /.row -->
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Home</a></li>
+                        <li class="breadcrumb-item active">Add New Image</li>
+                    </ol>
+                </div>
             </div>
-            <!-- /.container-fluid -->
-        </section>
+        </div>
+        <!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- left column -->
+                <div class="col-md-12">
+                    <!-- jquery validation -->
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">Form To <small> Add New Image to Sections</small></h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <!-- form start -->
+                        <form id="quickForm" action="{{ route('add_projects') }}" method="post"
+                            enctype="multipart/form-data">
+                            @csrf
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="exampleInputavater">Select Section</label>
+                                   <Select class="form-control" name="section" id="exampleInputavatar">
+                                    @foreach ($Projects as $image)
+                                       <option value="{{ $image->id }}">{{ $image->name }}</option>
+                                       @endforeach
+                                   </Select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputavater">Add Image</label>
+                                    <input type="file" name="filename" class="form-control" id="exampleInputavatar">
+                                </div>
+                                <div class="form-group">
+                                    <div
+                                        class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+                                        <input type="checkbox" class="custom-control-input" id="customSwitch3"
+                                            name="status" value="1">
+                                        <label class="custom-control-label" for="customSwitch3">Once You Toggle this
+                                            button then you agree to Activate the Image</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                            <div class="card-footer">
+                            <button type="submit" class="btn btn-primary">Add New Slider</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!--/.col (right) -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </section>
         <!-- /.content -->
     </div>
 
