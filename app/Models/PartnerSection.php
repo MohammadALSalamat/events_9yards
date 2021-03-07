@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class PartnerSection extends Model
 {
     use HasFactory;
+    public function partenerImages()
+    {
+
+        return $this->hasMany('App\Models\PartnerImages', 'sec_id');
+    }
 }

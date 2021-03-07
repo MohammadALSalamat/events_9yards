@@ -11,6 +11,6 @@ class PartnerImages extends Model
     public function PartnersSections()
     {
         # code...
-        return $this->belongsTo('App\Models\ProjectSection','id');
+        return $this->belongsTo('App\Models\PartnerSection','id');
     }
 }

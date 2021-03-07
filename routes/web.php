@@ -95,6 +95,9 @@ Route::group(['middleware' => ['admin']], function () {
     //Partners
 
     Route::get('View-Prteners',[ProjectController::class,'view_partners'])->name('view_partners');
+    Route::post('/add_partners',[ProjectController::class,'add_partners'])->name('add_partners');
+    Route::get('/Edite_partners/{id}',[ProjectController::class,'Edite_partners'])->name('Edite_partners');
+    Route::post('/update_partners/{id}',[ProjectController::class,'update_partners'])->name('update_partners');
     /*+++++++++++++++++++++++++++++++ End  the HomePage Routs +++++++++++++++++++++++++++*/
 });
 

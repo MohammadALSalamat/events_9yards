@@ -90,9 +90,9 @@
                             <table id="example1" class="table table-bordered table-striped">
                                 <thead>
                                     <tr style="text-align: center;">
-                                        <th>#ID</th>
-                                        <th>Section</th>
-                                        <th>Images</th>
+                                        <th style="width: 15%">#ID</th>
+                                        <th style="width: 15%">Section</th>
+                                        <th >Images</th>
                                     </tr>
                                 </thead>
                                 <tbody style="line-height: 4 !important;">
@@ -101,13 +101,13 @@
                                         <td>{{ $image->id }}</td>
                                         <td>{{ $image->name }}</td>
                                         @foreach ($image->projectImages as $item)
-                                        <td style="position: relative">
+                                        <td style="position: relative;width:8%">
                                             <div style="position: absolute;right:0;top:0; padding:10px;">
                                                 @if($item->status == 1) <i title="Active Image" style="color: green" class="fa fa-check"></i>@else<i title="Diaactive Image" style="color: red" class="fa fa-plus"></i>@endif
                                             </div>
                                             <img src="{{ asset('img/projects/'.$item->Image) }}" width="50px" height="50px" alt="">
                                         </td>
-                                        <td style="width: 20% !important">
+                                        <td style="width:8% !important">
                                             <a href="{{ route('Edite_Project',$item->id  ) }}"><button id="myBtn1" style="width: 100% !important" type="button"
                                                     class="btn btn-outline-primary btn-md"><i class="fa fa-pencil"
                                                         aria-hidden="true"></i>
@@ -174,7 +174,7 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form id="quickForm" action="{{ route('add_projects') }}" method="post"
+                        <form id="quickForm" action="{{ route('add_partners') }}" method="post"
                             enctype="multipart/form-data">
                             @csrf
                             <div class="card-body">

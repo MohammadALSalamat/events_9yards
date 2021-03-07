@@ -1,0 +1,28 @@
+-------------------- Auto-Git Log --------------------
+		Sun Mar 07 2021 15:29:54 GMT+0400 (Gulf Standard Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/layouts/front-layout/projects.blade.php
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-7-2-2021-14-59-22.txt
+* app/Http/Controllers/PartnerImagesController.php
+* app/Http/Controllers/PartnerSectionController.php
+* app/Models/PartnerImages.php
+* app/Models/PartnerSection.php
+* database/migrations/2021_03_07_112437_create_partner_sections_table.php
+* database/migrations/2021_03_07_112513_create_partner_images_table.php
+* public/img/projects/1769402.png
+* public/img/projects/3276589.png
+* public/img/projects/4332810.jpeg
+* public/img/projects/7687098.jpeg
+* resources/views/Back-End/Home-Page/partners/view_partners.blade.php
+
+
+Deleted files:
+
+
+Renamed files:
