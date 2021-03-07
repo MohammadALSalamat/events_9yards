@@ -101,7 +101,10 @@
                                         <td>{{ $image->id }}</td>
                                         <td>{{ $image->name }}</td>
                                         @foreach ($image->projectImages as $item)
-                                        <td>
+                                        <td style="position: relative">
+                                            <div style="position: absolute;right:0;top:0;border:1px solid #000;padding:20px">
+                                                @if($item->status == 1) <i class="fa fa-check"></i>@else<i class="fa fa-close"></i>@endif
+                                            </div>
                                             <img src="{{ asset('img/projects/'.$item->Image) }}" width="50px" height="50px" alt="">
                                         </td>
                                         <td style="width: 20% !important">

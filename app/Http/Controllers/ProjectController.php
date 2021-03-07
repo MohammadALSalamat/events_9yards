@@ -8,6 +8,7 @@ use App\Models\ProjectSection;
 use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Intervention\Image\Facades\Image;
 
 
 class ProjectController extends Controller
@@ -26,7 +27,6 @@ public function view_projects()
 
     public function add_projects(Request $request)
     {
-        $data =$request->all();
         if(empty($request->status)){
             $status = 0;
         }else{
@@ -37,13 +37,13 @@ public function view_projects()
             $image = $request->file('filename');
             $extentions = $image->clientExtension();
             $name = rand(1, 10000000) . '.' . $extentions;
-            $image->move(public_path().'/img/projects/',$name); //file Name
-
+            $path ='img/projects/'.$name;
+            Image::make($image)->save($path);
         }
         //insert the data
         $uplode_model = new ProjectImages();
         $uplode_model->sec_id = $request->section;
-        $uplode_model->Image =$image;
+        $uplode_model->Image =$name;
         $uplode_model->status = $status;
         $uplode_model->save();
         Toastr::success('Congrats, your data has been updated ', 'Success');
