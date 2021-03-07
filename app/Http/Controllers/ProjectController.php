@@ -54,7 +54,6 @@ public function view_projects()
     public function update_Project(Request $request,$id,$item)
     {
         $Projects = Project::where('id',$id)->first();
-
         # add projects
         if($request->hasFile('filename')){
             if($request->file('filename')->isValid()){
