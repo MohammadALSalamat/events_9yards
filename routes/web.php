@@ -92,6 +92,9 @@ Route::group(['middleware' => ['admin']], function () {
     Route::get('/Edite_Project/{id}',[ProjectController::class,'Edite_Project'])->name('Edite_Project');
     Route::post('/update_Project_Project/{id}',[ProjectController::class,'update_Project'])->name('update_Project');
 
+    //Partners
+
+    Route::get('View-Prteners',[ProjectController::class,'view_partners'])->name('view_partners');
     /*+++++++++++++++++++++++++++++++ End  the HomePage Routs +++++++++++++++++++++++++++*/
 });
 

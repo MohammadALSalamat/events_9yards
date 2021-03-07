@@ -1,4 +1,4 @@
-<div class=" text-white relative projects-background">
+<div class=" text-white relative projects-background" style="height: 1300px;overflow:hidden ">
     <div class=" ">
         <h1 class="w-full pt-10 text-center text-white text-capitalize">Projects</h1>
         <p class="text-center text-sm">Here's some of our highlighted events organized</p>
