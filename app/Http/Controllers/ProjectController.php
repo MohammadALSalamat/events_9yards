@@ -14,7 +14,9 @@ class ProjectController extends Controller
 //view projects
 public function view_projects()
 {
-    $Projects = Project::with(['project'])->get();
+
+    $Projects = Project::get();
+    dd($Projects);
     return view('Back-End.Home-Page.projects.view_projects' ,compact("Projects"));
 
 }
