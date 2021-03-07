@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Project;
+use App\Models\ProjectSection;
 use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -15,7 +16,8 @@ class ProjectController extends Controller
 public function view_projects()
 {
 
-    $Projects = Project::get();
+    $Projects = ProjectSection::with('projectImages')->get(); // get the list of sections and images that have related with
+
     dd($Projects);
     return view('Back-End.Home-Page.projects.view_projects' ,compact("Projects"));
 

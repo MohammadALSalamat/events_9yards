@@ -11,7 +11,7 @@ class ProjectImages extends Model
     public function projectSections()
     {
         # code...
-        return $this->belongsTo('App\Models\ProjectSection');
+        return $this->belongsTo('App\Models\ProjectSection','id');
     }
 
 }
