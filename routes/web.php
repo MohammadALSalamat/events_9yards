@@ -7,11 +7,13 @@ use App\Http\Controllers\BackDashboardController;
 use App\Http\Controllers\LeadingPageController;
 use App\Http\Controllers\HeaderSectionController;
 use App\Http\Controllers\InformationController;
+use App\Http\Controllers\PartnerSectionController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\UserSection;
 use App\Mail\RandomMail;
 use App\Models\Information;
+use App\Models\PartnerSection;
 use Illuminate\Support\Facades\Mail;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
@@ -94,10 +96,10 @@ Route::group(['middleware' => ['admin']], function () {
 
     //Partners
 
-    Route::get('View-Prteners',[ProjectController::class,'view_partners'])->name('view_partners');
-    Route::post('/add_partners',[ProjectController::class,'add_partners'])->name('add_partners');
-    Route::get('/Edite_partners/{id}',[ProjectController::class,'Edite_partners'])->name('Edite_partners');
-    Route::post('/update_partners/{id}',[ProjectController::class,'update_partners'])->name('update_partners');
+    Route::get('/view-Prteners',[PartnerSectionController::class,'view_partners'])->name('view_partners');
+    Route::post('/add_partners',[PartnerSectionController::class,'add_partners'])->name('add_partners');
+    Route::get('/Edite_partners/{id}',[PartnerSectionController::class,'Edite_partners'])->name('Edite_partners');
+    Route::post('/update_partners/{id}',[PartnerSectionController::class,'update_partners'])->name('update_partners');
     /*+++++++++++++++++++++++++++++++ End  the HomePage Routs +++++++++++++++++++++++++++*/
 });
 

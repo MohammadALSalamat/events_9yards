@@ -100,7 +100,7 @@
                                     <tr>
                                         <td>{{ $image->id }}</td>
                                         <td>{{ $image->name }}</td>
-                                        @foreach ($image->projectImages as $item)
+                                        @foreach ($image->partenerImages as $item)
                                         <td style="position: relative;width:8%">
                                             <div style="position: absolute;right:0;top:0; padding:10px;">
                                                 @if($item->status == 1) <i title="Active Image" style="color: green" class="fa fa-check"></i>@else<i title="Diaactive Image" style="color: red" class="fa fa-plus"></i>@endif

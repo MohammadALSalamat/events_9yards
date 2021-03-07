@@ -50,6 +50,7 @@ class FrontIndexController extends Controller
         $headerSlideShows = headerSlideshowSection::get(); // get the slideShow images
         $leading_info = leadingPage::first();//leading page section
         $Projects = ProjectSection::with('projectImages')->get();// get projects section images
+        $Projects = ProjectSection::with('projectImages')->get();// get parteners section images
 
         return view('layouts.front-layout.main_desgin', compact('CurrentUser', "logo_detaile", "headerTitles", "headerSlideShows","leading_info","Projects"));
     }

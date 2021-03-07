@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\PartnerImages;
-use App\Models\ProjectImages;
-use App\Models\ProjectSection;
+use App\Models\PartnerSection;
 use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
@@ -15,14 +14,14 @@ class PartnerSectionController extends Controller
 public function view_partners()
 {
 
-    $Projects = ProjectSection::with('partenerImages')->get(); // get the list of sections and images that have related with
-    return view('Back-End.Home-Page.projects.view_partners' ,compact("Projects"));
+    $Projects = PartnerSection::with('partenerImages')->get(); // get the list of sections and images that have related with
+    return view('Back-End.Home-Page.partners.view_partners' ,compact("Projects"));
 
 }
 
     //add projects
 
-    public function add_projects(Request $request)
+    public function add_partners(Request $request)
     {
         if(empty($request->status)){
             $status = 0;
@@ -49,16 +48,16 @@ public function view_partners()
 
     // view edite single image
 
-    public function Edite_Project(Request $request,$id)
+    public function Edite_partners(Request $request,$id)
     {
-        $Projects = ProjectImages::with('PartnersSections')->where('id',$id)->first();
+        $Projects = PartnerImages::with('PartnersSections')->where('id',$id)->first();
         //check the array if there is any value then change it
 
     return view('Back-End\Home-Page\projects\Edit_Single_parteners',compact('Projects'));
     }
 
 
-    public function update_Project(Request $request,$id)
+    public function update_partners(Request $request,$id)
     {
         $Projects = PartnerImages::with('PartnersSections')->where('id',$id)->first();
         # add projects
@@ -83,7 +82,7 @@ public function view_partners()
 
         }
 
-        ProjectImages::where('id',$id)->update([
+        PartnerImages::where('id',$id)->update([
             'Image'=>$name,
             'status'=>$status,
         ]);
