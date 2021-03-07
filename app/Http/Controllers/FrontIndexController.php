@@ -8,6 +8,8 @@ use App\Models\headerSlideshowSection;
 use App\Models\HomePage;
 use App\Models\leadingPage;
 use App\Models\Project;
+use App\Models\ProjectImages;
+use App\Models\ProjectSection;
 use Illuminate\Http\Request;
 
 class FrontIndexController extends Controller
@@ -47,7 +49,7 @@ class FrontIndexController extends Controller
         $headerTitles = headerSection::first(); // get the titles
         $headerSlideShows = headerSlideshowSection::get(); // get the slideShow images
         $leading_info = leadingPage::first();//leading page section
-        $Projects = Project::with(['project'])->get(); // get projects section images
+        $Projects = ProjectSection::with('projectImages')->get();// get projects section images
 
         return view('layouts.front-layout.main_desgin', compact('CurrentUser', "logo_detaile", "headerTitles", "headerSlideShows","leading_info","Projects"));
     }

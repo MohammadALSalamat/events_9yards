@@ -13,12 +13,19 @@
                       </div>
                     </div>
                     <!-- this section is to show all th project s from the database -->
-                    @foreach ($Projects as $image)
-                    @if (is_array($image) || is_object($image))
+                    @foreach ($Projects as $sections)
+                    @if($sections->status==1)
                     <div class="col-3">
-                        @foreach ((array)json_decode($image->Images) as $item)
-                        <img src="{{ asset('img/projects/'.$item) }}" alt="{{ $item }}" style="padding-bottom: 15px">
+                        @foreach ($sections->projectImages as $image)
+                        @if($image->status == 1)
+                        <img src="{{ asset('img/projects/'.$image->Image) }}" alt="{{ $image->Image }}" style="padding-bottom: 15px" width="100%">
+                        @else
+                        <img src="" alt="" style="display: none">
+                        @endif
                         @endforeach
+                    </div>
+                    @else
+                    <div style="display: none">
                     </div>
                     @endif
                     @endforeach
