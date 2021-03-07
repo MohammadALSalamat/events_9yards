@@ -52,54 +52,46 @@ public function view_projects()
 
     // view edite single image
 
-    public function Edite_Project(Request $request,$id,$item)
+    public function Edite_Project(Request $request,$id)
     {
-        $Projects = Project::where('id',$id)->first();
+        $Projects = ProjectImages::with('projectSections')->where('id',$id)->first();
         //check the array if there is any value then change it
-        $checkifImage = Str::contains($Projects->Images, $item);
-    return view('Back-End\Home-Page\projects\Edit_Single_project',compact('item','Projects'));
+
+    return view('Back-End\Home-Page\projects\Edit_Single_project',compact('Projects'));
     }
 
 
-    public function update_Project(Request $request,$id,$item)
+    public function update_Project(Request $request,$id)
     {
-        $Projects = Project::where('id',$id)->first();
+        $Projects = ProjectImages::with('projectSections')->where('id',$id)->first();
         # add projects
-        if($request->hasFile('filename')){
-            if($request->file('filename')->isValid()){
-                $image = $request->file('filename');
-                dd($image);
-                $extentions = $image->clientExtension();
-                $Newname = rand(1, 10000000) . '.' . $extentions;
-                $image->move(public_path().'/img/projects/',$Newname); //file Name
-                $data= $Newname;
-                $checkifImage = Str::contains($Projects->Images, $item);
-                if ($checkifImage == true) {
-                    foreach ((array)json_decode($Projects->Images) as $key=> $test) {
-                        if ($test == $item) {
-                            // $repl = str_replace($item, $data);
-                            // dd($repl);
-                        }
-                    }
-                }
-            }
+
+        if(empty($request->status)){
+            $status = 0;
         }else{
-            Toastr::error('can not update this image until you insert new data', 'Error');
-            return back();
+            $status = 1;
+        }
+        if(!empty($request->hasFile('filename'))){
+        if($request->hasFile('filename')){
+            if($request->hasFile('filename')){
+                $image = $request->file('filename');
+                $extentions = $image->clientExtension();
+                $name = rand(1, 10000000) . '.' . $extentions;
+                $path ='img/projects/'.$name;
+                Image::make($image)->save($path);
+            }
+        }
+         }else{
+            $name = $request->Current_Iamge;
 
         }
-        $array1 = (array)json_decode($Projects->Images);
-        $checkifImage = Str::contains($Projects->Images, $item);
-        //check the array if there is any value then change it
-        if($checkifImage == true){
-        foreach ((array)json_decode($Projects->Images) as $key=> $test){
-            if($test == $item){
-                $repl = array_replace($test);
-            }
-        }
-        }else{
-        Toastr::error('Sorry This Image is not Exists', 'Error');
+
+        ProjectImages::where('id',$id)->update([
+            'Image'=>$name,
+            'status'=>$status,
+        ]);
+        Toastr::success('you have updated the image ', 'Success');
         return back();
-        }
+
     }
 }

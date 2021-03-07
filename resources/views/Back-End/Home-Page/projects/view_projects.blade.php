@@ -102,8 +102,8 @@
                                         <td>{{ $image->name }}</td>
                                         @foreach ($image->projectImages as $item)
                                         <td style="position: relative">
-                                            <div style="position: absolute;right:0;top:0;border:1px solid #000;padding:20px">
-                                                @if($item->status == 1) <i class="fa fa-check"></i>@else<i class="fa fa-close"></i>@endif
+                                            <div style="position: absolute;right:0;top:0; padding:10px;">
+                                                @if($item->status == 1) <i title="Active Image" style="color: green" class="fa fa-check"></i>@else<i title="Diaactive Image" style="color: red" class="fa fa-plus"></i>@endif
                                             </div>
                                             <img src="{{ asset('img/projects/'.$item->Image) }}" width="50px" height="50px" alt="">
                                         </td>

@@ -33,21 +33,37 @@
                             </div>
                             <!-- /.card-header -->
                             <!-- form start -->
-                            <form id="quickForm" action="{{ route('update_Project',[$Projects->id,$item]  ) }}" method="post"
+                            <form id="quickForm" action="{{ route('update_Project',[$Projects->id]  ) }}" method="post"
                                 enctype="multipart/form-data">
                                 @csrf
                                 <div class="card-body">
                                     <h4>Current Image</h4>
-                                    <img src="{{ asset('img/projects/'.$item) }}" alt="{{ $item }}" width="200px" height="200px">
+                                    <img src="{{ asset('img/projects/'.$Projects->Image) }}" alt="{{ $Projects->Image }}" width="200px" height="200px">
+                                    <div class="form-group">
+                                    <label for="exampleInputavater">Select Section</label>
+                                   <Select class="form-control" name="section" id="exampleInputavatar" disabled>
+                                       <option value="{{ $Projects->projectSections ->id }}">{{ $Projects->projectSections ->name }}</option>
+                                   </Select>
+                                </div>
                                     <div class="form-group pt-12">
                                         <label for="exampleInputavater">Update Image</label>
-                                        <input type="hidden" name="Current_Iamge" value="{{ $item }}">
-                                        <input type="file" name="filename[]" class="form-control" id="exampleInputavatar">
+                                        <input type="hidden" name="Current_Iamge" value="{{ $Projects->Image }}">
+                                        <input type="file" name="filename" class="form-control" id="exampleInputavatar">
+                                    </div>
+                                    <div class="form-group">
+                                        <div
+                                            class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+                                            <input type="checkbox" class="custom-control-input" id="customSwitch3"
+                                                name="status" @if($Projects->status ==1)checked @else @endif>
+                                            <label class="custom-control-label" for="customSwitch3">Once You Toggle this
+                                                button then you agree to Activate the Image</label>
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- /.card-body -->
                                 <div class="card-footer">
                                 <button type="submit" class="btn btn-primary">Update Image</button>
+                                <a href="{{ route('view_projects') }}"><button type="button" class="btn btn-danger">View Projects</button></a>
                                 </div>
                             </form>
                         </div>
