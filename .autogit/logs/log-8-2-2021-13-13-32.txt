@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+		Mon Mar 08 2021 13:13:32 GMT+0400 (Gulf Standard Time)
+------------------------------------------------------
+
+Modified files:
+* public/css/style.css
+* resources/views/layouts/front-layout/projects.blade.php
+
+
+Created files:
+* .autogit/logs/log-8-2-2021-12-39-5.txt
+
+
+Deleted files:
+
+
+Renamed files:
