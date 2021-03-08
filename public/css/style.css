@@ -4702,16 +4702,9 @@ img {
     text-align: center;
 }
 
-.overlay h1 {
+.overlay a {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.overlay i {
-    position: absolute;
-    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
