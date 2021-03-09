@@ -122,6 +122,9 @@ Route::get('/new_data', [FrontIndexController::class, 'new_data'])->name('new_da
 
 // get the data from the user and send it to information table
 Route::post('/Informations', [InformationController::class, 'Insert_Info'])->name('Insert_Info');
+Route::get('/projects', function () {
+    return view('Front-End.Projects.view_all_projects');
+});
 
 // send email to user
 
