@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontIndexController;
 use App\Http\Controllers\BackDashboardController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\LeadingPageController;
 use App\Http\Controllers\HeaderSectionController;
 use App\Http\Controllers\InformationController;
@@ -95,12 +96,15 @@ Route::group(['middleware' => ['admin']], function () {
     Route::post('/update_Project_Project/{id}',[ProjectController::class,'update_Project'])->name('update_Project');
 
     //Partners
-
     Route::get('/view-Prteners',[PartnerSectionController::class,'view_partners'])->name('view_partners');
     Route::post('/add_partners',[PartnerSectionController::class,'add_partners'])->name('add_partners');
     Route::get('/Edite_partners/{id}',[PartnerSectionController::class,'Edite_partners'])->name('Edite_partners');
     Route::post('/update_partners/{id}',[PartnerSectionController::class,'update_partners'])->name('update_partners');
     /*+++++++++++++++++++++++++++++++ End  the HomePage Routs +++++++++++++++++++++++++++*/
+
+    /*+++++++++++++++++++++++++++++++ Start The Category Routs +++++++++++++++++++++++++++*/
+    Route::get('view_category',[CategoryController::class,'view_category'])->name('view_category');
+    /*+++++++++++++++++++++++++++++++ End  The Category  Routs +++++++++++++++++++++++++++*/
 });
 
 
