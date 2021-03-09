@@ -19,7 +19,6 @@
             </div>
             <!-- /.container-fluid -->
         </section>
-
         <!-- Main content -->
         <section class="content">
             <div class="container-fluid">
@@ -33,7 +32,7 @@
                             </div>
                             <!-- /.card-header -->
                             <!-- form start -->
-                            <form id="quickForm" action="{{ route('Insert_users') }}" method="post"
+                            <form id="quickForm" action="{{ route('insert_category') }}" method="post"
                                 enctype="multipart/form-data">
                                 @csrf
                                 <div class="card-body">
@@ -54,7 +53,7 @@
                                 </div>
                                 <!-- /.card-body -->
                                 <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary">Add User</button>
+                                    <button type="submit" class="btn btn-primary">Add Category</button>
                                 </div>
                             </form>
                         </div>
