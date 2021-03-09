@@ -38,7 +38,7 @@
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Name</label>
-                                        <input type="text" name="username" class="form-control" id="exampleInputEmail1"
+                                        <input type="text" name="category" class="form-control" id="exampleInputEmail1"
                                             placeholder="Eg: Video , Camera , Image .....">
                                     </div>
                                     <div class="form-group">
