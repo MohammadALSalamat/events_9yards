@@ -97,7 +97,9 @@
             <div class="overlay2">
             </div>
             <div class="overlay">
-                <a class="text-center text-white justify-center outline-none" href="#"><button class="glow-on-hover" type="button">View More <i class=" ml-5 fa fa-arrow-right"></i></button></a>
+                <a class="text-center text-white justify-center " href="#">
+                    <button style="outline: none"  class="glow-on-hover" type="button">View More <i class=" ml-2 fa fa-arrow-right">
+                        </i></button></a>
             </div>
 
         </div>
