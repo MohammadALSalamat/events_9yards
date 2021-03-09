@@ -104,6 +104,8 @@ Route::group(['middleware' => ['admin']], function () {
 
     /*+++++++++++++++++++++++++++++++ Start The Category Routs +++++++++++++++++++++++++++*/
     Route::get('view_category',[CategoryController::class,'view_category'])->name('view_category');
+    Route::post('add_category',[CategoryController::class,'add_category'])->name('add_category');
+
     /*+++++++++++++++++++++++++++++++ End  The Category  Routs +++++++++++++++++++++++++++*/
 });
 

@@ -13,4 +13,8 @@ class CategoryController extends Controller
         $Categories = Category::get();
         return view('Back-End.Category.view_Category',compact('Categories'));
     }
+    public function add_category(Request $request)
+    {
+        # code...
+    }
 }
