@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
-use Brian2694\Toastr\Toastr;
+use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -22,10 +22,10 @@ class CategoryController extends Controller
     public function insert_category(Request $request)
     {
         $data = $request->all();
-        dd($data);
         if(empty($data['Category'])){
             Toastr::error("Sorry, your Category must be not empty","Error");
         }
+        dd($data);
 
     }
 }

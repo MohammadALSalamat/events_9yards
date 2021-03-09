@@ -3,114 +3,7 @@
 
 <div class="container mt-20 mb-20">
     <div class="row">
-        <div class="col-sm-12 col-md-6 col-lg-3 gap-4 mb-2">
-            <div class="product-card-container">
-                <div class="product-card product-card1">
-                    <div class="info-icon-container">
-                        <div class="info-icon">
-                            <div class="bar-1"></div>
-                            <div class="bar-2"></div>
-                            <div class="bar-3"></div>
-                        </div>
-                        <!-- 			<p>Customize</p> -->
-                    </div>
-                    <div class="header">
-                        <h1>Product Name</h1>
-                        <button class="glow-on-hover">View Product <i class="fa fa-shopping-bag"></i></button>
-                        <em>$70.00</em>
-                    </div> <!-- end of header -->
-                    <div class="product-img">
-                        <img src="logo/9973523.png" alt="" />
-                    </div>
-                    <div class="bg-img">
-                        <img src="https://goo.gl/U7XMDL" alt="" />
-                    </div>
-
-                </div> <!-- end of product-card -->
-            </div><!-- end of product-card-container -->
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-3 gap-4 mb-2">
-            <div class="product-card-container">
-                <div class="product-card">
-                    <div class="info-icon-container">
-                        <div class="info-icon">
-                            <div class="bar-1"></div>
-                            <div class="bar-2"></div>
-                            <div class="bar-3"></div>
-                        </div>
-                        <!-- 			<p>Customize</p> -->
-                    </div>
-
-                    <div class="header">
-                        <h1>Product Name</h1>
-                        <button class="glow-on-hover">View Product <i class="fa fa-shopping-bag"></i></button>
-                        <em>$70.00</em>
-                    </div> <!-- end of header -->
-                    <div class="product-img">
-                        <img src="logo/9973523.png" alt="" />
-                    </div>
-                    <div class="bg-img">
-                        <img src="https://goo.gl/U7XMDL" alt="" />
-                    </div>
-
-                </div> <!-- end of product-card -->
-            </div><!-- end of product-card-container -->
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-3  gap-4 mb-2">
-            <div class="product-card-container">
-                <div class="product-card">
-                    <div class="info-icon-container">
-                        <div class="info-icon">
-                            <div class="bar-1"></div>
-                            <div class="bar-2"></div>
-                            <div class="bar-3"></div>
-                        </div>
-                        <!-- 			<p>Customize</p> -->
-                    </div>
-
-                    <div class="header">
-                        <h1>Product Name</h1>
-                        <button class="glow-on-hover">View Product <i class="fa fa-shopping-bag"></i></button>
-                        <em>$70.00</em>
-                    </div> <!-- end of header -->
-                    <div class="product-img">
-                        <img src="logo/9973523.png" alt="" />
-                    </div>
-                    <div class="bg-img">
-                        <img src="https://goo.gl/U7XMDL" alt="" />
-                    </div>
-
-                </div> <!-- end of product-card -->
-            </div><!-- end of product-card-container -->
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-3  gap-4 mb-2">
-            <div class="product-card-container">
-                <div class="product-card">
-                    <div class="info-icon-container">
-                        <div class="info-icon">
-                            <div class="bar-1"></div>
-                            <div class="bar-2"></div>
-                            <div class="bar-3"></div>
-                        </div>
-                        <!-- 			<p>Customize</p> -->
-                    </div>
-
-                    <div class="header">
-                        <h1>Product Name</h1>
-                        <button class="glow-on-hover">View Product <i class="fa fa-shopping-bag"></i></button>
-                        <em>$70.00</em>
-                    </div> <!-- end of header -->
-                    <div class="product-img">
-                        <img src="logo/9973523.png" alt="" />
-                    </div>
-                    <div class="bg-img">
-                        <img src="https://goo.gl/U7XMDL" alt="" />
-                    </div>
-
-                </div> <!-- end of product-card -->
-            </div><!-- end of product-card-container -->
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-3 gap-4 mb-2">
+        <div class="col-sm-12 col-md-6 col-lg-3 gap-4 mb-10">
             <div class="product-card-container">
                 <div class="product-card">
                     <div class="info-icon-container">
@@ -124,10 +17,9 @@
                     <div class="header">
                         <h1>Product Name</h1>
                         <button class="glow-on-hover">View Product <i class="fa fa-shopping-bag"></i></button>
-                        <em>$70.00</em>
                     </div> <!-- end of header -->
-                    <div class="product-img">
-                        <img src="logo/9973523.png" alt="" />
+                    <div class="product-img bg-white P-0">
+                        <img src="logo/new.png" alt="" width="100px" height="50px" />
                     </div>
                     <div class="bg-img">
                         <img src="https://goo.gl/U7XMDL" alt="" />
@@ -136,88 +28,7 @@
                 </div> <!-- end of product-card -->
             </div><!-- end of product-card-container -->
         </div>
-        <div class="col-sm-12 col-md-6 col-lg-3 gap-4 mb-2">
-            <div class="product-card-container">
-                <div class="product-card">
-                    <div class="info-icon-container">
-                        <div class="info-icon">
-                            <div class="bar-1"></div>
-                            <div class="bar-2"></div>
-                            <div class="bar-3"></div>
-                        </div>
-                        <!-- 			<p>Customize</p> -->
-                    </div>
-
-                    <div class="header">
-                        <h1>Product Name</h1>
-                        <button class="glow-on-hover">View Product <i class="fa fa-shopping-bag"></i></button>
-                        <em>$70.00</em>
-                    </div> <!-- end of header -->
-                    <div class="product-img">
-                        <img src="logo/9973523.png" alt="" />
-                    </div>
-                    <div class="bg-img">
-                        <img src="https://goo.gl/U7XMDL" alt="" />
-                    </div>
-
-                </div> <!-- end of product-card -->
-            </div><!-- end of product-card-container -->
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-3  gap-4 mb-2">
-            <div class="product-card-container">
-                <div class="product-card">
-                    <div class="info-icon-container">
-                        <div class="info-icon">
-                            <div class="bar-1"></div>
-                            <div class="bar-2"></div>
-                            <div class="bar-3"></div>
-                        </div>
-                        <!-- 			<p>Customize</p> -->
-                    </div>
-
-                    <div class="header">
-                        <h1>Product Name</h1>
-                        <button class="glow-on-hover">View Product <i class="fa fa-shopping-bag"></i></button>
-                        <em>$70.00</em>
-                    </div> <!-- end of header -->
-                    <div class="product-img">
-                        <img src="logo/9973523.png" alt="" />
-                    </div>
-                    <div class="bg-img">
-                        <img src="https://goo.gl/U7XMDL" alt="" />
-                    </div>
-
-                </div> <!-- end of product-card -->
-            </div><!-- end of product-card-container -->
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-3  gap-4 mb-2">
-            <div class="product-card-container">
-                <div class="product-card">
-                    <div class="info-icon-container">
-                        <div class="info-icon">
-                            <div class="bar-1"></div>
-                            <div class="bar-2"></div>
-                            <div class="bar-3"></div>
-                        </div>
-                        <!-- 			<p>Customize</p> -->
-                    </div>
-
-                    <div class="header">
-                        <h1>Product Name</h1>
-                        <button class="glow-on-hover">View Product <i class="fa fa-shopping-bag"></i></button>
-                        <em>$70.00</em>
-                    </div> <!-- end of header -->
-                    <div class="product-img">
-                        <img src="logo/9973523.png" alt="" />
-                    </div>
-                    <div class="bg-img">
-                        <img src="https://goo.gl/U7XMDL" alt="" />
-                    </div>
-
-                </div> <!-- end of product-card -->
-            </div><!-- end of product-card-container -->
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-3 gap-4 mb-2">
+        <div class="col-sm-12 col-md-6 col-lg-3 gap-4 mb-10">
             <div class="product-card-container">
                 <div class="product-card">
                     <div class="info-icon-container">
@@ -231,10 +42,9 @@
                     <div class="header">
                         <h1>Product Name</h1>
                         <button class="glow-on-hover">View Product <i class="fa fa-shopping-bag"></i></button>
-                        <em>$70.00</em>
                     </div> <!-- end of header -->
                     <div class="product-img">
-                        <img src="logo/9973523.png" alt="" />
+                        <img src="logo/new.png" alt="" width="100px" height="50px" />
                     </div>
                     <div class="bg-img">
                         <img src="https://goo.gl/U7XMDL" alt="" />
@@ -243,7 +53,7 @@
                 </div> <!-- end of product-card -->
             </div><!-- end of product-card-container -->
         </div>
-        <div class="col-sm-12 col-md-6 col-lg-3 gap-4 mb-2">
+        <div class="col-sm-12 col-md-6 col-lg-3 gap-4 mb-10">
             <div class="product-card-container">
                 <div class="product-card">
                     <div class="info-icon-container">
@@ -254,14 +64,12 @@
                         </div>
                         <!-- 			<p>Customize</p> -->
                     </div>
-
                     <div class="header">
                         <h1>Product Name</h1>
                         <button class="glow-on-hover">View Product <i class="fa fa-shopping-bag"></i></button>
-                        <em>$70.00</em>
                     </div> <!-- end of header -->
                     <div class="product-img">
-                        <img src="logo/9973523.png" alt="" />
+                        <img src="logo/new.png" alt="" width="100px" height="50px" />
                     </div>
                     <div class="bg-img">
                         <img src="https://goo.gl/U7XMDL" alt="" />
@@ -270,7 +78,7 @@
                 </div> <!-- end of product-card -->
             </div><!-- end of product-card-container -->
         </div>
-        <div class="col-sm-12 col-md-6 col-lg-3  gap-4 mb-2">
+        <div class="col-sm-12 col-md-6 col-lg-3 gap-4 mb-10">
             <div class="product-card-container">
                 <div class="product-card">
                     <div class="info-icon-container">
@@ -281,14 +89,12 @@
                         </div>
                         <!-- 			<p>Customize</p> -->
                     </div>
-
                     <div class="header">
                         <h1>Product Name</h1>
                         <button class="glow-on-hover">View Product <i class="fa fa-shopping-bag"></i></button>
-                        <em>$70.00</em>
                     </div> <!-- end of header -->
                     <div class="product-img">
-                        <img src="logo/9973523.png" alt="" />
+                        <img src="logo/new.png" alt="" width="100px" height="50px" />
                     </div>
                     <div class="bg-img">
                         <img src="https://goo.gl/U7XMDL" alt="" />
@@ -297,7 +103,7 @@
                 </div> <!-- end of product-card -->
             </div><!-- end of product-card-container -->
         </div>
-        <div class="col-sm-12 col-md-6 col-lg-3  gap-4 mb-2">
+        <div class="col-sm-12 col-md-6 col-lg-3 gap-4 mb-10">
             <div class="product-card-container">
                 <div class="product-card">
                     <div class="info-icon-container">
@@ -308,14 +114,187 @@
                         </div>
                         <!-- 			<p>Customize</p> -->
                     </div>
-
                     <div class="header">
                         <h1>Product Name</h1>
                         <button class="glow-on-hover">View Product <i class="fa fa-shopping-bag"></i></button>
-                        <em>$70.00</em>
                     </div> <!-- end of header -->
                     <div class="product-img">
-                        <img src="logo/9973523.png" alt="" />
+                        <img src="logo/new.png" alt="" width="100px" height="50px" />
+                    </div>
+                    <div class="bg-img">
+                        <img src="https://goo.gl/U7XMDL" alt="" />
+                    </div>
+
+                </div> <!-- end of product-card -->
+            </div><!-- end of product-card-container -->
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 gap-4 mb-10">
+            <div class="product-card-container">
+                <div class="product-card">
+                    <div class="info-icon-container">
+                        <div class="info-icon">
+                            <div class="bar-1"></div>
+                            <div class="bar-2"></div>
+                            <div class="bar-3"></div>
+                        </div>
+                        <!-- 			<p>Customize</p> -->
+                    </div>
+                    <div class="header">
+                        <h1>Product Name</h1>
+                        <button class="glow-on-hover">View Product <i class="fa fa-shopping-bag"></i></button>
+                    </div> <!-- end of header -->
+                    <div class="product-img">
+                        <img src="logo/new.png" alt="" width="100px" height="50px" />
+                    </div>
+                    <div class="bg-img">
+                        <img src="https://goo.gl/U7XMDL" alt="" />
+                    </div>
+
+                </div> <!-- end of product-card -->
+            </div><!-- end of product-card-container -->
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 gap-4 mb-10">
+            <div class="product-card-container">
+                <div class="product-card">
+                    <div class="info-icon-container">
+                        <div class="info-icon">
+                            <div class="bar-1"></div>
+                            <div class="bar-2"></div>
+                            <div class="bar-3"></div>
+                        </div>
+                        <!-- 			<p>Customize</p> -->
+                    </div>
+                    <div class="header">
+                        <h1>Product Name</h1>
+                        <button class="glow-on-hover">View Product <i class="fa fa-shopping-bag"></i></button>
+                    </div> <!-- end of header -->
+                    <div class="product-img">
+                        <img src="logo/new.png" alt="" width="100px" height="50px" />
+                    </div>
+                    <div class="bg-img">
+                        <img src="https://goo.gl/U7XMDL" alt="" />
+                    </div>
+
+                </div> <!-- end of product-card -->
+            </div><!-- end of product-card-container -->
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 gap-4 mb-10">
+            <div class="product-card-container">
+                <div class="product-card">
+                    <div class="info-icon-container">
+                        <div class="info-icon">
+                            <div class="bar-1"></div>
+                            <div class="bar-2"></div>
+                            <div class="bar-3"></div>
+                        </div>
+                        <!-- 			<p>Customize</p> -->
+                    </div>
+                    <div class="header">
+                        <h1>Product Name</h1>
+                        <button class="glow-on-hover">View Product <i class="fa fa-shopping-bag"></i></button>
+                    </div> <!-- end of header -->
+                    <div class="product-img">
+                        <img src="logo/new.png" alt="" width="100px" height="50px" />
+                    </div>
+                    <div class="bg-img">
+                        <img src="https://goo.gl/U7XMDL" alt="" />
+                    </div>
+
+                </div> <!-- end of product-card -->
+            </div><!-- end of product-card-container -->
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 gap-4 mb-10">
+            <div class="product-card-container">
+                <div class="product-card">
+                    <div class="info-icon-container">
+                        <div class="info-icon">
+                            <div class="bar-1"></div>
+                            <div class="bar-2"></div>
+                            <div class="bar-3"></div>
+                        </div>
+                        <!-- 			<p>Customize</p> -->
+                    </div>
+                    <div class="header">
+                        <h1>Product Name</h1>
+                        <button class="glow-on-hover">View Product <i class="fa fa-shopping-bag"></i></button>
+                    </div> <!-- end of header -->
+                    <div class="product-img">
+                        <img src="logo/new.png" alt="" width="100px" height="50px" />
+                    </div>
+                    <div class="bg-img">
+                        <img src="https://goo.gl/U7XMDL" alt="" />
+                    </div>
+
+                </div> <!-- end of product-card -->
+            </div><!-- end of product-card-container -->
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 gap-4 mb-10">
+            <div class="product-card-container">
+                <div class="product-card">
+                    <div class="info-icon-container">
+                        <div class="info-icon">
+                            <div class="bar-1"></div>
+                            <div class="bar-2"></div>
+                            <div class="bar-3"></div>
+                        </div>
+                        <!-- 			<p>Customize</p> -->
+                    </div>
+                    <div class="header">
+                        <h1>Product Name</h1>
+                        <button class="glow-on-hover">View Product <i class="fa fa-shopping-bag"></i></button>
+                    </div> <!-- end of header -->
+                    <div class="product-img">
+                        <img src="logo/new.png" alt="" width="100px" height="50px" />
+                    </div>
+                    <div class="bg-img">
+                        <img src="https://goo.gl/U7XMDL" alt="" />
+                    </div>
+
+                </div> <!-- end of product-card -->
+            </div><!-- end of product-card-container -->
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 gap-4 mb-10">
+            <div class="product-card-container">
+                <div class="product-card">
+                    <div class="info-icon-container">
+                        <div class="info-icon">
+                            <div class="bar-1"></div>
+                            <div class="bar-2"></div>
+                            <div class="bar-3"></div>
+                        </div>
+                        <!-- 			<p>Customize</p> -->
+                    </div>
+                    <div class="header">
+                        <h1>Product Name</h1>
+                        <button class="glow-on-hover">View Product <i class="fa fa-shopping-bag"></i></button>
+                    </div> <!-- end of header -->
+                    <div class="product-img">
+                        <img src="logo/new.png" alt="" width="100px" height="50px" />
+                    </div>
+                    <div class="bg-img">
+                        <img src="https://goo.gl/U7XMDL" alt="" />
+                    </div>
+
+                </div> <!-- end of product-card -->
+            </div><!-- end of product-card-container -->
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 gap-4 mb-10">
+            <div class="product-card-container">
+                <div class="product-card">
+                    <div class="info-icon-container">
+                        <div class="info-icon">
+                            <div class="bar-1"></div>
+                            <div class="bar-2"></div>
+                            <div class="bar-3"></div>
+                        </div>
+                        <!-- 			<p>Customize</p> -->
+                    </div>
+                    <div class="header">
+                        <h1>Product Name</h1>
+                        <button class="glow-on-hover">View Product <i class="fa fa-shopping-bag"></i></button>
+                    </div> <!-- end of header -->
+                    <div class="product-img">
+                        <img src="logo/new.png" alt="" width="100px" height="50px" />
                     </div>
                     <div class="bg-img">
                         <img src="https://goo.gl/U7XMDL" alt="" />

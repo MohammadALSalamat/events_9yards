@@ -5202,7 +5202,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    bottom: -5rem;
+    bottom: 0rem;
     z-index: 3;
     transition: all 0.3s ease-in-out;
     perspective: 850px;
