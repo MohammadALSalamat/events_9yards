@@ -71,9 +71,6 @@ href="{{ url('admin-style/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bo
 
     @include('layouts.front-layout.top-navbar') <!-- menu code  -->
         @yield('content')
-
-
-
         <!-- Control Sidebar -->
         <aside class="control-sidebar control-sidebar-dark">
             <!-- Control sidebar content goes here -->
