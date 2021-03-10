@@ -25,8 +25,16 @@ class ProductController extends Controller
     public function insert_Product(Request $request)
     {
         $data = $request->all();
+        if($data['category'] == 0){
+            Toastr::error("Sorry, your Category must be not empty","Error");
+            return back();
+        }
         if(empty($data['Product'])){
             Toastr::error("Sorry, your Product must be not empty","Error");
+            return back();
+        }
+        if(empty($data['slug'])){
+            Toastr::error("Sorry, your slug must be not empty","Error");
             return back();
         }
         if(empty($data['status'])){
@@ -35,7 +43,10 @@ class ProductController extends Controller
             $status = 1;
         }
         $newCat  =  new Product();
+        $newCat-> cat_id = $data['category'];
         $newCat-> name = $data['Product'];
+        $newCat-> description = $data['description'];
+        $newCat-> slug = $data['slug'];
         $newCat-> status = $status;
         $newCat->save();
         Toastr::success("Congrats, your Product has been Added","Success");

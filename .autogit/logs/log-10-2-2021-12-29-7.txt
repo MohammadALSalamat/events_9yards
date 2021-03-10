@@ -1,0 +1,24 @@
+-------------------- Auto-Git Log --------------------
+		Wed Mar 10 2021 12:29:07 GMT+0400 (Gulf Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/CategoryController.php
+* resources/views/layouts/back-layout/sidebar.blade.php
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-10-2-2021-11-58-28.txt
+* app/Http/Controllers/ProductController.php
+* app/Models/Product.php
+* database/migrations/2021_03_10_080331_create_products_table.php
+* resources/views/Back-End/Product/Add_Product.blade.php
+* resources/views/Back-End/Product/edit_Product.blade.php
+* resources/views/Back-End/Product/view_Product.blade.php
+
+
+Deleted files:
+
+
+Renamed files:

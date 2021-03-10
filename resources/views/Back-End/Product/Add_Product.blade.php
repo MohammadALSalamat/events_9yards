@@ -39,7 +39,8 @@
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label for="exampleInputavater">Select Category</label>
-                                       <Select class="form-control" name="section" id="exampleInputavatar">
+                                       <Select class="form-control" name="category" id="exampleInputavatar">
+                                        <option value="0">---- Select A Category ----</option>
                                         @foreach ($Category as $Cat)
                                            <option value="{{ $Cat->id }}">{{ $Cat->name }}</option>
                                            @endforeach
@@ -49,6 +50,16 @@
                                         <label for="exampleInputEmail1">Name</label>
                                         <input type="text" name="Product" class="form-control" id="exampleInputEmail1"
                                             placeholder="Eg: Video , Camera , Image .....">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail3">Description</label>
+                                        <textarea name="description" id=""class="form-control" id="exampleInputEmail3" cols="30" rows="10" required></textarea>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Slug</label>
+                                        <input type="text" name="slug" class="form-control" id="exampleInputEmail1"
+                                            placeholder="uniqe name for the product">
                                     </div>
                                     <div class="form-group">
                                         <div
