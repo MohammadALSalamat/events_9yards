@@ -80,5 +80,9 @@ class FrontIndexController extends Controller
     }
 
 
-    // Front Header Section Show detailes
+    public function events()
+    {
+        $Projects = ProjectSection::with('projectImages')->get();// get projects section images
+        return view('Front-End\Events\all_events',compact('Projects'));
+    }
 }

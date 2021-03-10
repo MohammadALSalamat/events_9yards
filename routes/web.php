@@ -16,6 +16,7 @@ use App\Http\Controllers\UserSection;
 use App\Mail\RandomMail;
 use App\Models\Information;
 use App\Models\PartnerSection;
+use App\Models\ProjectSection;
 use Illuminate\Support\Facades\Mail;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
@@ -155,9 +156,7 @@ Route::post('/Informations', [InformationController::class, 'Insert_Info'])->nam
 Route::get('/projects', function () {
     return view('Front-End.Projects.view_all_projects');
 });
-Route::get('/events', function () {
-    return view('Front-End\Events\all_events');
-});
+Route::get('/events',[FrontIndexController::class , 'events'])->name('events');
 
 // send email to user
 

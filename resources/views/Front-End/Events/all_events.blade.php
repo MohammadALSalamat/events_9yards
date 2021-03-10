@@ -1,3 +1,32 @@
+ <!-- Font awesome -->
+ <link href="{{ url('css/font-awesome.css') }}" rel="stylesheet">
+ <!-- Bootstrap -->
+ <link id="switcher" href="{{ url('css/theme-color/default-theme.css') }}" rel="stylesheet">
+
+ <!-- Main style sheet -->
+ <link href="{{ url('css/style.css') }}" rel="stylesheet">
+ <link href="{{ url('css/tailwind.css') }}" rel="stylesheet">
+ <!-- Google Font -->
+ <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+ <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+<!-- Google Font: Source Sans Pro -->
+<link rel="stylesheet"
+href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+<!-- Font Awesome -->
+
+<link rel="stylesheet" href="{{ url('admin-style/plugins/fontawesome-free/css/all.min.css') }}">
+<!-- Ionicons -->
+<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+<!-- Tempusdominus Bootstrap 4 -->
+<link rel="stylesheet"
+href="{{ url('admin-style/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
+<!-- iCheck -->
+<link rel="stylesheet" href="{{ url('admin-style/plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
+<!-- JQVMap -->
+<link rel="stylesheet" href="{{ url('admin-style/plugins/jqvmap/jqvmap.min.css') }}">
+<!-- Theme style -->
+<link rel="stylesheet" href="{{ url('admin-style/dist/css/adminlte.min.css') }}">
+
 <style>
     HTML CSS JSResult Skip Results Iframe
 EDIT ON
@@ -16,7 +45,7 @@ EDIT ON
 }
 
 body{
-  background-image: radial-gradient(mintcream 0%, lightgray 100%);
+  background-image: radial-gradient(white 30%, black 70%);
 }
 h1{
   display: table;
@@ -83,69 +112,49 @@ img:hover{
     transform: rotateY(360deg);
   }
 }
+.bg-images{
+    background: radial-gradient(gray 30%, black 70%);
+}
 </style>
 
-<h1>9Yards Evnts</h1>
+<h1>9Yards Events</h1>
   <div class="container">
     <div id="carousel">
-      <figure><img src="http://lorempixel.com/186/116/nature/1" alt=""></figure>
-      <figure><img src="http://lorempixel.com/186/116/nature/2" alt=""></figure>
-      <figure><img src="http://lorempixel.com/186/116/nature/3" alt=""></figure>
-      <figure><img src="http://lorempixel.com/186/116/nature/4" alt=""></figure>
-      <figure><img src="http://lorempixel.com/186/116/nature/5" alt=""></figure>
-      <figure><img src="http://lorempixel.com/186/116/nature/6" alt=""></figure>
-      <figure><img src="http://lorempixel.com/186/116/nature/7" alt=""></figure>
-      <figure><img src="http://lorempixel.com/186/116/nature/8" alt=""></figure>
-      <figure><img src="http://lorempixel.com/186/116/people/9" alt=""></figure>
+        @foreach ($Projects as $sections)
+        @if($sections->status==1)
+           @foreach ($sections->projectImages as $image)
+            @if($image->status == 1)
+            <figure> <img src="{{ asset('img/projects/'.$image->Image) }}" alt="{{ $image->Image }}" width="100%"></figure>
+            @else
+            <img src="" alt="" style="display: none">
+            @endif
+            @endforeach
+        @else
+        <div style="display: none">
+        </div>
+        @endif
+        @endforeach
     </div>
   </div>
 
-  <div class="">
-      <div class="row">
-          <div class="col-4">
-            <img src="{{ asset('img/projects/158296.jpeg') }}" alt="" width="400px" height="400px">
-          </div>
-          <div class="col-4">
-            <img src="{{ asset('img/projects/158296.jpeg') }}" alt=""  width="400px" height="400px">
-          </div>
-          <div class="col-4">
-            <img src="{{ asset('img/projects/158296.jpeg') }}" alt=""  width="400px" height="400px">
-          </div>
-          <div class="col-4">
-            <img src="{{ asset('img/projects/158296.jpeg') }}" alt=""  width="400px" height="400px">
-          </div>
-          <div class="col-4">
-            <img src="{{ asset('img/projects/158296.jpeg') }}" alt=""  width="400px" height="400px">
-          </div>
-          <div class="col-4">
-            <img src="{{ asset('img/projects/158296.jpeg') }}" alt=""  width="400px" height="400px">
-          </div>
-          <div class="col-4">
-            <img src="{{ asset('img/projects/158296.jpeg') }}" alt=""  width="400px" height="400px">
-          </div>
-          <div class="col-4">
-            <img src="{{ asset('img/projects/158296.jpeg') }}" alt=""  width="400px" height="400px">
-          </div>
-          <div class="col-4">
-            <img src="{{ asset('img/projects/158296.jpeg') }}" alt=""  width="400px" height="400px">
-          </div>
-          <div class="col-4">
-            <img src="{{ asset('img/projects/158296.jpeg') }}" alt=""  width="400px" height="400px">
-          </div>
-          <div class="col-4">
-            <img src="{{ asset('img/projects/158296.jpeg') }}" alt=""  width="400px" height="400px">
-          </div>
-          <div class="col-4">
-            <img src="{{ asset('img/projects/158296.jpeg') }}" alt=""  width="400px" height="400px">
-          </div>
-          <div class="col-4">
-            <img src="{{ asset('img/projects/158296.jpeg') }}" alt=""  width="400px" height="400px">
-          </div>
-          <div class="col-4">
-            <img src="{{ asset('img/projects/158296.jpeg') }}" alt=""  width="400px" height="400px">
-          </div>
-          <div class="col-4">
-            <img src="{{ asset('img/projects/158296.jpeg') }}" alt=""  width="400px" height="400px">
-          </div>
-      </div>
+<div class="bg-images">
+  <div class="row">
+    <!-- this section is to show all th project s from the database -->
+     @foreach ($Projects as $sections)
+     @if($sections->status==1)
+     <div class="col-3">
+        @foreach ($sections->projectImages as $image)
+         @if($image->status == 1)
+         <img src="{{ asset('img/projects/'.$image->Image) }}" alt="{{ $image->Image }}" width="100%">
+         @else
+         <img src="" alt="" style="display: none">
+         @endif
+         @endforeach
+     </div>
+     @else
+     <div style="display: none">
+     </div>
+     @endif
+     @endforeach
   </div>
+</div>
