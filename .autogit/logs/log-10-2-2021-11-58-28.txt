@@ -1,0 +1,20 @@
+-------------------- Auto-Git Log --------------------
+		Wed Mar 10 2021 11:58:28 GMT+0400 (Gulf Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/CategoryController.php
+* resources/views/Back-End/Category/view_Category.blade.php
+* resources/views/Front-End/Projects/view_all_projects.blade.php
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-9-2-2021-17-15-22.txt
+* resources/views/Back-End/Category/edit_category.blade.php
+
+
+Deleted files:
+
+
+Renamed files:

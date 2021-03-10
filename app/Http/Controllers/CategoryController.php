@@ -91,6 +91,7 @@ class CategoryController extends Controller
             Toastr::error("Sorry, this ID is not found","Error");
             return redirect()->route('view_category');
         }
+        Category::where('id',$id)->delete();
 
     }
 }

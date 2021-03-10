@@ -9,6 +9,7 @@ use App\Http\Controllers\LeadingPageController;
 use App\Http\Controllers\HeaderSectionController;
 use App\Http\Controllers\InformationController;
 use App\Http\Controllers\PartnerSectionController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\UserSection;
@@ -111,6 +112,22 @@ Route::group(['middleware' => ['admin']], function () {
     Route::match(['get', 'post'],'admin/delete_category/{id}',[CategoryController::class,'delete_category'])->name('delete_category');
 
     /*+++++++++++++++++++++++++++++++ End  The Category  Routs +++++++++++++++++++++++++++*/
+
+
+    /*+++++++++++++++++++++++++++++++ Start The Products Routs +++++++++++++++++++++++++++*/
+    Route::get('view_Product',[ProductController::class,'view_Product'])->name('view_Product');
+    Route::get('add_Product',[ProductController::class,'add_Product'])->name('add_Product');
+    Route::post('insert_Product',[ProductController::class,'insert_Product'])->name('insert_Product');
+    Route::get('edit_Product/{id}',[ProductController::class,'edit_Product'])->name('edit_Product');
+    Route::match(['get', 'post'],'update_Product/{id}',[ProductController::class,'update_Product'])->name('update_Product');
+    Route::match(['get', 'post'],'admin/delete_Product/{id}',[ProductController::class,'delete_Product'])->name('delete_Product');
+
+    /*+++++++++++++++++++++++++++++++ End The Products Routs +++++++++++++++++++++++++++*/
+
+
+
+
+
 });
 
 

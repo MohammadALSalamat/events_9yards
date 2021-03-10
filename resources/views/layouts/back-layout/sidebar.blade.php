@@ -156,6 +156,30 @@
                         </li>
                     </ul>
                 </li>
+                <li class="nav-header">Products Section</li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa fa-books"></i>
+                        <p>
+                            Product
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('view_Product') }}" class="nav-link active">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>View Products</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('add_Product') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Add Products</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
