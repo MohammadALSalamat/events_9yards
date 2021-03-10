@@ -2,6 +2,14 @@
 @section('content')
 
 <div class="container mt-20 mb-20">
+    <ul class="mb-5">
+        <a href="#"><li class="shadow-md d-inline border-2 py-3 px-10 text-bold text-black cursor-pointer hover:bg-black hover:bold hover:text-white ">All</li></a>
+        @foreach ($Products as $Product)
+        @if(!empty($Product->Category->name))
+        <a href="{{ $Product->cat_id }}"><li class=" shadow-md d-inline border-2 py-3 px-10 text-bold text-black cursor-pointer hover:bg-black hover:bold hover:text-white ">{{ $Product->Category->name }}</li></a>
+        @endif
+        @endforeach
+    </ul>
     <div class="row">
         @foreach ($Products as $Product)
         <div class="col-sm-12 col-md-6 col-lg-3 gap-4 mb-10">
@@ -17,15 +25,15 @@
                     </div>
                     <div class="header text-center">
                         <h1>{{ $Product->name }}</h1>
-                    <a href="{{ $Product->id }}">
-                        <button class="glow-on-hover">View Product <i class="fa fa-eye"></i></button>
-                    </a>
+                        <a href="{{ $Product->id }}">
+                            <button class="glow-on-hover">View Product <i class="fa fa-eye"></i></button>
+                        </a>
                     </div>
-                     <!-- end of header -->
+                    <!-- end of header -->
                     <div class="product-img pt-5">
-                        <img src="{{ asset('img/products/'.$Product->image) }}" alt="{{ $Product->image }}" width="100px" height="30px" />
+                        <img src="{{ asset('img/products/'.$Product->image) }}" alt="{{ $Product->image }}"
+                            width="100px" height="30px" />
                     </div>
-
 
                 </div> <!-- end of product-card -->
             </div><!-- end of product-card-container -->
@@ -34,11 +42,10 @@
     </div>
 </div>
 
-
 {{-- <p class="coords"></p>
 <p class="coords-2"></p> --}}
 <script type="text/babel">
-const card = $('.product-card'),
+    const card = $('.product-card'),
 coord = $('.coords'),
 coord2 = $('.coords-2');
 
