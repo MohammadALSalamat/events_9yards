@@ -40,7 +40,7 @@
                                     <div class="form-group">
                                         <label for="exampleInputavater">Select Category</label>
                                        <Select class="form-control" name="category" id="exampleInputavatar">
-                                        <option value="{{ $edit_Product->cat_id }}">{{ $edit_Product->Category->name }}</option>
+                                        <option value="{{ $edit_Product->cat_id }}">{{ $cat_product->name }}</option>
                                         @foreach ($Category as $Cat)
                                            <option value="{{ $Cat->id }}">{{ $Cat->name }}</option>
                                            @endforeach

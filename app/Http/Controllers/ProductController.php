@@ -79,13 +79,14 @@ class ProductController extends Controller
             return redirect()->route('view_Product');
                 }
         $edit_Product = Product::with('Category')->where('id',$id)->first();
-        return view('Back-End.Product.edit_Product',compact('edit_Product','Category'));
+        $cat_product = Category::where('id',$edit_Product->cat_id)->first();
+        return view('Back-End.Product.edit_Product',compact('edit_Product','Category','cat_product'));
 
     }
 
     public function update_Product(Request $request , $id)
     {
-            $data = $request->all();
+        $data = $request->all();
         $findid = Product::find($id);
 
         if(empty($findid)){
@@ -146,6 +147,8 @@ class ProductController extends Controller
             return redirect()->route('view_Product');
         }
         Product::where('id',$id)->delete();
+        Toastr::success("Congrats, your Product has been deleted","Success");
+        return redirect()->route('view_Product');
 
     }
 }
