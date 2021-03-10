@@ -8,6 +8,7 @@ use App\Models\headerSlideshowSection;
 use App\Models\HomePage;
 use App\Models\leadingPage;
 use App\Models\PartnerSection;
+use App\Models\Product;
 use App\Models\Project;
 use App\Models\ProjectImages;
 use App\Models\ProjectSection;
@@ -57,6 +58,12 @@ class FrontIndexController extends Controller
     }
 
 
+    public function Products()
+    {
+        $Products = Product::with('Category')->get();
+        dd($Products);
+        return view('Front-End.Projects.view_all_projects');
+    }
     // send email page
 
     public function email_page()

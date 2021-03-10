@@ -144,6 +144,9 @@ Route::get('/', [FrontIndexController::class, 'main_page'])->name('main_page');
 Route::get('/Email', [FrontIndexController::class, 'email_page'])->name('email_page');
 Route::get('/new_data', [FrontIndexController::class, 'new_data'])->name('new_data');
 
+
+
+Route::get('/Products',[FrontIndexController::class , 'Products'])->name('Products');
 /*+++++++++++++++++++++++++++++++ End  the Front End Routs +++++++++++++++++++++++++++*/
 
 
