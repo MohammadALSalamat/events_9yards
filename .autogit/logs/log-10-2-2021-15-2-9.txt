@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+		Wed Mar 10 2021 15:02:09 GMT+0400 (Gulf Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/FrontIndexController.php
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-10-2-2021-14-31-30.txt
+
+
+Deleted files:
+
+
+Renamed files:

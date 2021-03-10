@@ -9,7 +9,7 @@
          <ul class="main-top-nav-bar">
              <li><a href="#">Home</a></li>
              <li class="active-top-navbar"><a href="#">About</a></li>
-             <li><a href="#">Project</a></li>
+             <li><a href="{{ route('Products') }}">Project</a></li>
              <li><a href="#">Contact Us</a></li>
 
          </ul>

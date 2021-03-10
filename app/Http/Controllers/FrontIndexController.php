@@ -61,8 +61,7 @@ class FrontIndexController extends Controller
     public function Products()
     {
         $Products = Product::with('Category')->get();
-        dd($Products);
-        return view('Front-End.Projects.view_all_projects');
+        return view('Front-End.Projects.view_all_projects' ,compact('Products'));
     }
     // send email page
 
