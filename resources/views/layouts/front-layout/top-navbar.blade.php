@@ -7,9 +7,9 @@
      </a>
      <div class="navbar-links">
          <ul class="main-top-nav-bar">
-             <li><a href="#">Home</a></li>
+             <li><a href="{{ route('main_page') }}">Home</a></li>
              <li class="active-top-navbar"><a href="#">About</a></li>
-             <li><a href="{{ route('Products') }}">Project</a></li>
+             <li><a href="{{ route('Products') }}">Products</a></li>
              <li><a href="#">Contact Us</a></li>
 
          </ul>

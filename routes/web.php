@@ -155,6 +155,9 @@ Route::post('/Informations', [InformationController::class, 'Insert_Info'])->nam
 Route::get('/projects', function () {
     return view('Front-End.Projects.view_all_projects');
 });
+Route::get('/events', function () {
+    return view('Front-End\Events\all_events');
+});
 
 // send email to user
 
