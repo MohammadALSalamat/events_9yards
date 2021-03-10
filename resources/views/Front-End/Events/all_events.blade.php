@@ -1,31 +1,5 @@
- <!-- Font awesome -->
- <link href="{{ url('css/font-awesome.css') }}" rel="stylesheet">
- <!-- Bootstrap -->
- <link id="switcher" href="{{ url('css/theme-color/default-theme.css') }}" rel="stylesheet">
-
- <!-- Main style sheet -->
- <link href="{{ url('css/style.css') }}" rel="stylesheet">
- <link href="{{ url('css/tailwind.css') }}" rel="stylesheet">
- <!-- Google Font -->
- <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
- <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-<!-- Google Font: Source Sans Pro -->
-<link rel="stylesheet"
-href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-<!-- Font Awesome -->
-
-<link rel="stylesheet" href="{{ url('admin-style/plugins/fontawesome-free/css/all.min.css') }}">
-<!-- Ionicons -->
-<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-<!-- Tempusdominus Bootstrap 4 -->
-<link rel="stylesheet"
-href="{{ url('admin-style/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
-<!-- iCheck -->
-<link rel="stylesheet" href="{{ url('admin-style/plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
-<!-- JQVMap -->
-<link rel="stylesheet" href="{{ url('admin-style/plugins/jqvmap/jqvmap.min.css') }}">
-<!-- Theme style -->
-<link rel="stylesheet" href="{{ url('admin-style/dist/css/adminlte.min.css') }}">
+@extends('layouts.front-layout.main_desgin_project')
+@section('content')
 
 <style>
     HTML CSS JSResult Skip Results Iframe
@@ -115,9 +89,93 @@ img:hover{
 .bg-images{
     background: radial-gradient(gray 30%, black 70%);
 }
+/* todo: animate letters */
+.letter {
+  display: inline-block;
+  opacity: 0;
+  -webkit-animation: fadeIn 2s, moveDown 2s;
+          animation: fadeIn 2s, moveDown 2s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+          animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.letter:nth-child(1) {
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+}
+
+.letter:nth-child(2) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.letter:nth-child(3) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.letter:nth-child(4) {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+
+.letter:nth-child(5) {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
+.letter:nth-child(6) {
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+}
+
+
+@-webkit-keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes moveDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes moveDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 </style>
 
-<h1>9Yards Events</h1>
+<h1>
+    <span class="letter">9</span>
+    <span class="letter">Y</span>
+    <span class="letter">A</span>
+    <span class="letter">R</span>
+    <span class="letter">D</span>
+    <span class="letter">S</span>
+</h1>
+
+<h1> 9Yards Projects </h1>
   <div class="container">
     <div id="carousel">
         @foreach ($Projects as $sections)
@@ -158,3 +216,5 @@ img:hover{
      @endforeach
   </div>
 </div>
+
+@endsection

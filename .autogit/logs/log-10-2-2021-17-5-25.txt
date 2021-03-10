@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Wed Mar 10 2021 17:05:25 GMT+0400 (Gulf Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/FrontIndexController.php
+* resources/views/Front-End/Events/all_events.blade.php
+* resources/views/layouts/front-layout/projects.blade.php
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-10-2-2021-16-34-49.txt
+
+
+Deleted files:
+
+
+Renamed files:

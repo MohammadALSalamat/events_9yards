@@ -37,7 +37,7 @@
             <div class="overlay2">
             </div>
             <div class="overlay">
-                <a class="text-center text-white justify-center " href="#">
+                <a class="text-center text-white justify-center " href="{{ route('events') }}">
                     <button style="outline: none"  class="glow-on-hover" type="button">View More <i class=" ml-2 fa fa-arrow-right">
                         </i></button></a>
             </div>
