@@ -7,12 +7,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Edit Admin</h1>
+                        <h1>Add Admin</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Edit Product</li>
+                            <li class="breadcrumb-item active">Add Product</li>
                         </ol>
                     </div>
                 </div>
@@ -35,17 +35,42 @@
                             <form id="quickForm" action="{{ route('update_Product',$edit_Product->id) }}" method="post"
                                 enctype="multipart/form-data">
                                 @csrf
+
                                 <div class="card-body">
+                                    <div class="form-group">
+                                        <label for="exampleInputavater">Select Category</label>
+                                       <Select class="form-control" name="category" id="exampleInputavatar">
+                                        <option value="{{ $edit_Product->cat_id }}">{{ $edit_Product->Category->name }}</option>
+                                        @foreach ($Category as $Cat)
+                                           <option value="{{ $Cat->id }}">{{ $Cat->name }}</option>
+                                           @endforeach
+                                       </Select>
+                                    </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Name</label>
                                         <input type="text" name="Product" class="form-control" id="exampleInputEmail1"
                                             placeholder="Eg: Video , Camera , Image ....." value="{{ $edit_Product->name }}">
                                     </div>
                                     <div class="form-group">
+                                        <label for="exampleInputEmail3">Description</label>
+                                        <textarea name="description" id=""class="form-control" id="exampleInputEmail3" cols="30" rows="10" required>{{ $edit_Product->description }}</textarea>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Slug</label>
+                                        <input type="text" name="slug" class="form-control" id="exampleInputEmail1"
+                                            placeholder="uniqe name for the product" value="{{ $edit_Product->slug }}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputavater">Add Image</label>
+                                        <input type="hidden" name="current_image">
+                                       <img src="{{ asset('img/products/'.$edit_Product->image) }}" alt="$edit_Product->image" width="50px" height="50px"> <input type="file" name="filename" class="form-control" id="exampleInputavatar">
+                                    </div>
+                                    <div class="form-group">
                                         <div
                                             class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
                                             <input type="checkbox" class="custom-control-input" id="customSwitch3"
-                                                name="status" @if($edit_Product->status == 1) checked @endif>
+                                                name="status" @if($edit_Product->status == 1)checked @endif>
                                             <label class="custom-control-label" for="customSwitch3">Once You Toggle this
                                                 button then you agree to Activate the User</label>
                                         </div>
@@ -53,8 +78,8 @@
                                 </div>
                                 <!-- /.card-body -->
                                 <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary ">Update Product</button>
-                                  <a href="{{ route('view_Product') }}"><button type="button" class="btn btn-danger">back</button></a>
+                                    <button type="submit" class="btn btn-primary">Add Product</button>
+                                    <a href="{{ route('view_Product') }}"><button type="button" class="btn btn-danger">back</button></a>
                                 </div>
                             </form>
                         </div>

@@ -16,8 +16,6 @@ class ProductController extends Controller
         # view the main Product
         $Products = Product::with('Category')->get();
         $Category = Category::with('Products')->get();
-        dd($Category);
-
         return view('Back-End.Product.view_Product',compact('Products','Category'));
     }
     public function add_Product()
@@ -75,18 +73,19 @@ class ProductController extends Controller
     public function edit_Product($id)
     {
         $findid = Product::find($id);
-
+        $Category = Category::with('Products')->get();
         if(empty($findid)){
             Toastr::error("Sorry, this ID is not found","Error");
             return redirect()->route('view_Product');
                 }
-        $edit_Product = Product::where('id',$id)->first();
-        return view('Back-End.Product.edit_Product',compact('edit_Product'));
+        $edit_Product = Product::with('Category')->where('id',$id)->first();
+        return view('Back-End.Product.edit_Product',compact('edit_Product','Category'));
 
     }
 
     public function update_Product(Request $request , $id)
     {
+            $data = $request->all();
         $findid = Product::find($id);
 
         if(empty($findid)){
@@ -94,18 +93,42 @@ class ProductController extends Controller
             return redirect()->route('view_Product');
                 }else{
              # update single Product
-        $data = $request->all();
-        if(empty($data['Product'])){
-            Toastr::error("Sorry, your Product must be not empty","Error");
-            return back();
-        }
-        if(empty($data['status'])){
-            $status = 0;
-        }else{
-            $status = 1;
-        }
+             if($data['category'] == 0){
+                Toastr::error("Sorry, your Category must be not empty","Error");
+                return back();
+            }
+            if(empty($data['Product'])){
+                Toastr::error("Sorry, your Product must be not empty","Error");
+                return back();
+            }
+            if(empty($data['slug'])){
+                Toastr::error("Sorry, your slug must be not empty","Error");
+                return back();
+            }
+            if(empty($data['status'])){
+                $status = 0;
+            }else{
+                $status = 1;
+            }
+            if(empty($data['filename'])){
+               $name = $data['current_image'];
+            }else{
+                if($request->hasFile('filename')){
+                    $image = $request->file('filename');
+                    $extentions = $image->clientExtension();
+                    $name = rand(1, 10000000) . '.' . $extentions;
+                    $path ='img/products/'.$name;
+                    Image::make($image)->save($path);
+                }
+            }
+            # add projects
+
         Product::where('id',$id)->update([
             'name'=>$data['Product'],
+            'cat_id' =>$data['category'],
+            'image' =>$name,
+            'slug' =>$data['slug'],
+            'description' =>$data['description'],
             'status'=>$status
         ]);
         Toastr::success("Congrats, your Product has been Updated","Success");

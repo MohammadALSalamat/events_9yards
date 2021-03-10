@@ -62,10 +62,6 @@
                                             placeholder="uniqe name for the product">
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputavater">Add Image</label>
-                                        <input type="file" name="filename" class="form-control" id="exampleInputavatar">
-                                    </div>
-                                    <div class="form-group">
                                         <div
                                             class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
                                             <input type="checkbox" class="custom-control-input" id="customSwitch3"
@@ -78,7 +74,7 @@
                                 <!-- /.card-body -->
                                 <div class="card-footer">
                                     <button type="submit" class="btn btn-primary">Add Product</button>
-                                    <a href="{{ route('view_Product') }}"><button type="button" class="btn btn-danger">back</button></a>
+                                    <a href="{{ route('view_Product') }}"></a><button type="button" class="btn btn-primary">back</button>
                                 </div>
                             </form>
                         </div>
