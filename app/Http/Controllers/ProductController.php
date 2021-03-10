@@ -6,14 +6,18 @@ use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Brian2694\Toastr\Facades\Toastr;
+use Intervention\Image\Facades\Image;
+
 
 class ProductController extends Controller
 {
     public function view_Product()
     {
         # view the main Product
-        $Products = Product::get();
-        $Category = Category::get();
+        $Products = Product::with('Category')->get();
+        $Category = Category::with('Products')->get();
+        dd($Category);
+
         return view('Back-End.Product.view_Product',compact('Products','Category'));
     }
     public function add_Product()
@@ -42,9 +46,22 @@ class ProductController extends Controller
         }else{
             $status = 1;
         }
+        if(empty($data['filename'])){
+            Toastr::error("Sorry, your Image must be not empty","Error");
+            return back();
+        }
+        # add projects
+        if($request->hasFile('filename')){
+            $image = $request->file('filename');
+            $extentions = $image->clientExtension();
+            $name = rand(1, 10000000) . '.' . $extentions;
+            $path ='img/products/'.$name;
+            Image::make($image)->save($path);
+        }
         $newCat  =  new Product();
         $newCat-> cat_id = $data['category'];
         $newCat-> name = $data['Product'];
+        $newCat-> name = $name;
         $newCat-> description = $data['description'];
         $newCat-> slug = $data['slug'];
         $newCat-> status = $status;
