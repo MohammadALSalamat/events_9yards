@@ -106,6 +106,9 @@ Route::group(['middleware' => ['admin']], function () {
     Route::get('view_category',[CategoryController::class,'view_category'])->name('view_category');
     Route::get('add_category',[CategoryController::class,'add_category'])->name('add_category');
     Route::post('insert_category',[CategoryController::class,'insert_category'])->name('insert_category');
+    Route::get('edit_category/{id}',[CategoryController::class,'edit_category'])->name('edit_category');
+    Route::match(['get', 'post'],'update_category/{id}',[CategoryController::class,'update_category'])->name('update_category');
+    Route::match(['get', 'post'],'admin/delete_category/{id}',[CategoryController::class,'delete_category'])->name('delete_category');
 
     /*+++++++++++++++++++++++++++++++ End  The Category  Routs +++++++++++++++++++++++++++*/
 });

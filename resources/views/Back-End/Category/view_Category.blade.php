@@ -37,7 +37,7 @@
                             <div class="card-body">
                                 <table id="example1" class="table table-bordered table-striped">
                                     <thead>
-                                        <tr>
+                                        <tr class="text-center">
                                             <th>#ID</th>
                                             <th>Name</th>
                                             <th>Status</th>
@@ -49,17 +49,17 @@
                                             <tr style="text-align: center;">
                                                 <td>{{ $user->id }}</td>
                                                 <td>{{ $user->name }}</td>
-                                                <td>{{ $user->status }}</td>
-                                                {{-- <td>
-                                                    <a href="{{ url('Categories/Edit/' . $user->id) }}"><button type="button"
+                                                <td>@if ($user->status == 1 ) <span class="text-green">Active</span> @else <span class="text-red">Deactive</span>@endif </td>
+                                                <td>
+                                                    <a href="{{ route('edit_category', $user->id) }}"><button type="button"
                                                             style="width: 45%" class="btn btn-outline-primary btn-md"><i
                                                                 class="fa fa-pencil" aria-hidden="true"></i>
                                                             Modify</button></a>
-                                                    <a href="javascript:"><button rel="{{ $user->id }}" rel1="user"
+                                                    <a href="javascript:"><button rel="{{ $user->id }}" rel1="delete_category"
                                                             type="button" style="width: 45%"
                                                             class="btn btn-outline-danger btn-md deleteRecord">
                                                             Delete</button></a>
-                                                </td> --}}
+                                                </td>
                                             </tr>
                                         @endforeach
                                     </tbody>

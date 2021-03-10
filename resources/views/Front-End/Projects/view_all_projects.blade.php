@@ -18,7 +18,7 @@
                         <h1>Product Name</h1>
                         <button class="glow-on-hover">View Product <i class="fa fa-shopping-bag"></i></button>
                     </div> <!-- end of header -->
-                    <div class="product-img bg-white P-0">
+                    <div class="product-img P-0">
                         <img src="logo/new.png" alt="" width="100px" height="50px" />
                     </div>
                     <div class="bg-img">
