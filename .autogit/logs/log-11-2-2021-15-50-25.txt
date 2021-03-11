@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Thu Mar 11 2021 15:50:25 GMT+0400 (Gulf Standard Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/layouts/front-layout/homePage.blade.php
+
+
+Created files:
+* .autogit/logs/log-11-2-2021-15-19-49.txt
+
+
+Deleted files:
+
+
+Renamed files:
