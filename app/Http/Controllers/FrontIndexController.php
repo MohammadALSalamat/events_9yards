@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\FrontUser;
 use App\Models\headerSection;
 use App\Models\headerSlideshowSection;
@@ -60,7 +61,7 @@ class FrontIndexController extends Controller
 
     public function Products()
     {
-        $Products = Product::with('Category')->get();
+        $Products = Category::with('Products')->get();
         return view('Front-End.Projects.view_all_projects' ,compact('Products'));
     }
     // send email page

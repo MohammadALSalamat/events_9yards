@@ -59,7 +59,7 @@ class ProductController extends Controller
         $newCat  =  new Product();
         $newCat-> cat_id = $data['category'];
         $newCat-> name = $data['Product'];
-        $newCat-> name = $name;
+        $newCat-> image = $name;
         $newCat-> description = $data['description'];
         $newCat-> slug = $data['slug'];
         $newCat-> status = $status;

@@ -12,6 +12,9 @@
     </ul>
     <div class="row">
         @foreach ($Products as $Product)
+        @if($Product->status == 1)
+        @foreach($$Product->Products as $value)
+
         <div class="col-sm-12 col-md-6 col-lg-3 gap-4 mb-10">
             <div class="product-card-container">
                 <div class="product-card">
@@ -24,20 +27,27 @@
                         <!-- <p>Customize</p> -->
                     </div>
                     <div class="header text-center">
-                        <h1>{{ $Product->name }}</h1>
+                        <h1>{{ $value->name }}</h1>
                         <a href="{{ $Product->id }}">
                             <button class="glow-on-hover">View Product <i class="fa fa-eye"></i></button>
                         </a>
                     </div>
                     <!-- end of header -->
                     <div class="product-img pt-5">
-                        <img src="{{ asset('img/products/'.$Product->image) }}" alt="{{ $Product->image }}"
+                        <img src="{{ asset('img/products/'.$value->image) }}" alt="{{ $Pvalue->image }}"
                             width="100px" height="30px" />
                     </div>
 
                 </div> <!-- end of product-card -->
             </div><!-- end of product-card-container -->
         </div>
+        @else
+        <div class="d-none">
+
+        </div>
+        @endif
+
+        @endforeach
         @endforeach
     </div>
 </div>
