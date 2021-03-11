@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\PartnerImages;
 use App\Models\PartnerSection;
 use Brian2694\Toastr\Facades\Toastr;
+use Faker\Provider\File;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 
@@ -51,9 +52,10 @@ public function view_partners()
     public function Edite_partners(Request $request,$id)
     {
         $Projects = PartnerImages::with('PartnersSections')->where('id',$id)->first();
+        $project_section =PartnerSection::where('id',$Projects->sec_id)->first();
         //check the array if there is any value then change it
 
-    return view('Back-End.Home-Page.partners.Edit_Single_partner',compact('Projects'));
+    return view('Back-End.Home-Page.partners.Edit_Single_partner',compact('Projects','project_section'));
     }
 
 
@@ -65,6 +67,10 @@ public function view_partners()
             $status = 0;
         }else{
             $status = 1;
+        }
+        $usersImage = public_path("uploads/images/{$Projects->Image}"); // get previous image from folder
+        if (File::exists($usersImage)) { // unlink or remove previous image from folder
+            unlink($usersImage);
         }
         if(!empty($request->hasFile('filename'))){
         if($request->hasFile('filename')){

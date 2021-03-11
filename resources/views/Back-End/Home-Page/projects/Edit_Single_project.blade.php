@@ -42,7 +42,7 @@
                                     <div class="form-group">
                                     <label for="exampleInputavater">Select Section</label>
                                    <Select class="form-control" name="section" id="exampleInputavatar" disabled>
-                                       <option value="{{ $Projects->sec_id }}">{{ $Projects->projectSections->name }}</option>
+                                       <option value="{{ $Projects->sec_id }}">{{ $project_section->name }}</option>
                                    </Select>
                                 </div>
                                     <div class="form-group pt-12">

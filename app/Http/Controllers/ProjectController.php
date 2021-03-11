@@ -55,9 +55,10 @@ public function view_projects()
     public function Edite_Project(Request $request,$id)
     {
         $Projects = ProjectImages::with('projectSections')->where('id',$id)->first();
+        $project_section =ProjectSection::where('id',$Projects->sec_id)->first();
         //check the array if there is any value then change it
-
-    return view('Back-End\Home-Page\projects\Edit_Single_project',compact('Projects'));
+       // $cat_product = Category::where('id',$edit_Product->cat_id)->first();
+    return view('Back-End\Home-Page\projects\Edit_Single_project',compact('Projects','project_section'));
     }
 
 
