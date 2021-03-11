@@ -286,24 +286,24 @@ img:hover{
     </div>
   </div>
 
-  <section id="portfolio" class="portfolio">
+  {{-- <section id="portfolio" class="portfolio">
   @foreach ($Projects as $sections)
   @if($sections->status==1)
+  @foreach ($sections->projectImages as $image)
   <div class="col-3 portfolio-item filter-app">
-     @foreach ($sections->projectImages as $image)
       @if($image->status == 1)
       <div class="portfolio-img"><img src="{{ asset('img/projects/'.$image->Image) }}" class="img-fluid" alt="{{ $image->Image }}" ></div>
       <div class="portfolio-info">
         <h4>App 1</h4>
         <p>App</p>
-        <a href="assets/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+        <a href="{{ asset('img/projects/'.$image->Image) }}" data-gall="portfolioGallery" class="venobox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
         <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
       </div>
       @else
       <img src="" alt="" style="display: none">
       @endif
+    </div>
       @endforeach
-  </div>
   @else
   <div style="display: none">
   </div>
@@ -318,10 +318,10 @@ img:hover{
       <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
     </div>
   </div>
-  </section>
+  </section> --}}
   <!-- Second option -->
 
-{{-- <div class="bg-images">
+<div class="bg-images">
   <div class="row">
     <!-- this section is to show all th project s from the database -->
      @foreach ($Projects as $sections)
@@ -341,7 +341,7 @@ img:hover{
      @endif
      @endforeach
   </div>
-</div> --}}
+</div>
 
 @endsection
 

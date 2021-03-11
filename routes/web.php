@@ -101,7 +101,7 @@ Route::group(['middleware' => ['admin']], function () {
     Route::get('/view-Prteners',[PartnerSectionController::class,'view_partners'])->name('view_partners');
     Route::post('/add_partners',[PartnerSectionController::class,'add_partners'])->name('add_partners');
     Route::get('/Edite_partners/{id}',[PartnerSectionController::class,'Edite_partners'])->name('Edite_partners');
-    Route::post('/update_partners/{id}',[PartnerSectionController::class,'update_partners'])->name('update_partners');
+    Route::get('/update_partners/{id}',[PartnerSectionController::class,'update_partners'])->name('update_partners');
     /*+++++++++++++++++++++++++++++++ End  the HomePage Routs +++++++++++++++++++++++++++*/
 
     /*+++++++++++++++++++++++++++++++ Start The Category Routs +++++++++++++++++++++++++++*/
