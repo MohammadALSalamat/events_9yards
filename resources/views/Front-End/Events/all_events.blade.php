@@ -72,10 +72,12 @@ img{
   -webkit-filter: grayscale(1);
   cursor: pointer;
   transition: all .5s ease;
+  z-index: 9;
 }
 img:hover{
   -webkit-filter: grayscale(0);
   transform: scale(1.2,1.2);
+  z-index: 10;
 }
 
 @keyframes rotation{
@@ -164,6 +166,95 @@ img:hover{
   }
 }
 
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+.portfolio .portfolio-item {
+  margin-bottom: 30px;
+}
+
+.portfolio .portfolio-item .portfolio-img {
+  overflow: hidden;
+}
+
+.portfolio .portfolio-item .portfolio-img img {
+  transition: all 0.8s ease-in-out;
+}
+
+.portfolio .portfolio-item .portfolio-info {
+  opacity: 0;
+  position: absolute;
+  left: 15px;
+  bottom: 0;
+  z-index: 3;
+  right: 15px;
+  transition: all ease-in-out 0.3s;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 15px;
+}
+
+.portfolio .portfolio-item .portfolio-info h4 {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0px;
+}
+
+.portfolio .portfolio-item .portfolio-info p {
+  color: #fedac0;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.portfolio .portfolio-item .portfolio-info .preview-link, .portfolio .portfolio-item .portfolio-info .details-link {
+  position: absolute;
+  right: 40px;
+  font-size: 24px;
+  top: calc(50% - 18px);
+  color: #fff;
+  transition: 0.3s;
+}
+
+.portfolio .portfolio-item .portfolio-info .preview-link:hover, .portfolio .portfolio-item .portfolio-info .details-link:hover {
+  color: #fd9f5b;
+}
+
+.portfolio .portfolio-item .portfolio-info .details-link {
+  right: 10px;
+}
+
+.portfolio .portfolio-item .portfolio-links {
+  opacity: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 3;
+  position: absolute;
+  transition: all ease-in-out 0.3s;
+}
+
+.portfolio .portfolio-item .portfolio-links a {
+  color: #fff;
+  margin: 0 2px;
+  font-size: 28px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.portfolio .portfolio-item .portfolio-links a:hover {
+  color: #fd9f5b;
+}
+
+.portfolio .portfolio-item:hover .portfolio-img img {
+  transform: scale(1.2);
+}
+
+.portfolio .portfolio-item:hover .portfolio-info {
+  opacity: 1;
+}
+
 </style>
 
 <h1>
@@ -195,7 +286,42 @@ img:hover{
     </div>
   </div>
 
-<div class="bg-images">
+  <section id="portfolio" class="portfolio">
+  @foreach ($Projects as $sections)
+  @if($sections->status==1)
+  <div class="col-3 portfolio-item filter-app">
+     @foreach ($sections->projectImages as $image)
+      @if($image->status == 1)
+      <div class="portfolio-img"><img src="{{ asset('img/projects/'.$image->Image) }}" class="img-fluid" alt="{{ $image->Image }}" ></div>
+      <div class="portfolio-info">
+        <h4>App 1</h4>
+        <p>App</p>
+        <a href="assets/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+        <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+      </div>
+      @else
+      <img src="" alt="" style="display: none">
+      @endif
+      @endforeach
+  </div>
+  @else
+  <div style="display: none">
+  </div>
+  @endif
+  @endforeach
+  <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+    <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt=""></div>
+    <div class="portfolio-info">
+      <h4>App 1</h4>
+      <p>App</p>
+      <a href="assets/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+      <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+    </div>
+  </div>
+  </section>
+  <!-- Second option -->
+
+{{-- <div class="bg-images">
   <div class="row">
     <!-- this section is to show all th project s from the database -->
      @foreach ($Projects as $sections)
@@ -215,6 +341,31 @@ img:hover{
      @endif
      @endforeach
   </div>
-</div>
+</div> --}}
 
 @endsection
+
+<script>
+  // Portfolio details carousel
+  $(".portfolio-details-carousel").owlCarousel({
+    autoplay: true,
+    dots: true,
+    loop: true,
+    items: 1
+  });
+
+  // Init AOS
+  function aos_init() {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      once: true,
+      mirror: false
+    });
+  }
+  $(window).on('load', function() {
+    aos_init();
+  });
+
+})(jQuery);
+</script>
