@@ -1,5 +1,5 @@
 <style>
-    [class^=swiper-button-] {
+    /* [class^=swiper-button-] {
         transition: all 0.3s ease;
     }
 
@@ -117,7 +117,7 @@
 
     .swiper-button-next {
         transform: translateX(-50px);
-    }
+    } */
 </style>
 
 <div class="px-0 pb-48" style="background-color: #FFF;">

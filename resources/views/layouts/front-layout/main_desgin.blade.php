@@ -112,7 +112,6 @@ href="{{ url('admin-style/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bo
 
     {!! Toastr::message() !!}
     @yield('script')
-
 </body>
 
 </html>
