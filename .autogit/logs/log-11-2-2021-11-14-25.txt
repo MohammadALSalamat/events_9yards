@@ -1,0 +1,23 @@
+-------------------- Auto-Git Log --------------------
+		Thu Mar 11 2021 11:14:25 GMT+0400 (Gulf Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/PartnerSectionController.php
+* app/Http/Controllers/ProjectController.php
+* resources/views/Back-End/Home-Page/partners/Edit_Single_partner.blade.php
+* resources/views/Back-End/Home-Page/projects/Edit_Single_project.blade.php
+
+
+Created files:
+* .autogit/logs/log-11-2-2021-10-43-51.txt
+* public/img/projects/1288295.jpeg
+* public/img/projects/4735727.jpeg
+* public/img/projects/8182972.jpeg
+* public/img/projects/8183867.jpeg
+
+
+Deleted files:
+
+
+Renamed files:

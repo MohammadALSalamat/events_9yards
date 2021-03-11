@@ -72,8 +72,12 @@ public function view_projects()
         }else{
             $status = 1;
         }
+        $usersImage = public_path("img/projects/{$Projects->Image}"); // get previous image from folder
         if(!empty($request->hasFile('filename'))){
         if($request->hasFile('filename')){
+            if(file_exists($usersImage)) { // unlink or remove previous image from folder
+                unlink($usersImage);
+            }
             if($request->hasFile('filename')){
                 $image = $request->file('filename');
                 $extentions = $image->clientExtension();

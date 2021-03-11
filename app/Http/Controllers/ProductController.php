@@ -111,10 +111,15 @@ class ProductController extends Controller
             }else{
                 $status = 1;
             }
+            $usersImage = public_path("img/projects/{$findid->image}"); // get previous image from folder
+
             if(empty($data['filename'])){
                $name = $data['current_image'];
             }else{
                 if($request->hasFile('filename')){
+                    if(file_exists($usersImage)) { // unlink or remove previous image from folder
+                        unlink($usersImage);
+                    }
                     $image = $request->file('filename');
                     $extentions = $image->clientExtension();
                     $name = rand(1, 10000000) . '.' . $extentions;
