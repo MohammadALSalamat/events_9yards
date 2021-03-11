@@ -95,13 +95,13 @@ Route::group(['middleware' => ['admin']], function () {
     Route::get('View-Projects',[ProjectController::class,'view_projects'])->name('view_projects');
     Route::post('/add_projects',[ProjectController::class,'add_projects'])->name('add_projects');
     Route::get('/Edite_Project/{id}',[ProjectController::class,'Edite_Project'])->name('Edite_Project');
-    Route::post('/update_Project_Project/{id}',[ProjectController::class,'update_Project'])->name('update_Project');
+    Route::post('/update_Project/{id}',[ProjectController::class,'update_Project'])->name('update_Project');
 
     //Partners
     Route::get('/view-Prteners',[PartnerSectionController::class,'view_partners'])->name('view_partners');
     Route::post('/add_partners',[PartnerSectionController::class,'add_partners'])->name('add_partners');
     Route::get('/Edite_partners/{id}',[PartnerSectionController::class,'Edite_partners'])->name('Edite_partners');
-    Route::get('/update_partners/{id}',[PartnerSectionController::class,'update_partners'])->name('update_partners');
+    Route::post('/update_partners/{id}',[PartnerSectionController::class,'update_partners'])->name('update_partners');
     /*+++++++++++++++++++++++++++++++ End  the HomePage Routs +++++++++++++++++++++++++++*/
 
     /*+++++++++++++++++++++++++++++++ Start The Category Routs +++++++++++++++++++++++++++*/

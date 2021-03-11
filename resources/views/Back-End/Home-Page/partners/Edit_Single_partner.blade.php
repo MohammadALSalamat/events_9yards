@@ -33,7 +33,7 @@
                             </div>
                             <!-- /.card-header -->
                             <!-- form start -->
-                            <form id="quickForm" action="{{ route('update_Project',[$Projects->id]  ) }}" method="post"
+                            <form id="quickForm" action="{{ route('update_partners',$Projects->id  ) }}" method="post"
                                 enctype="multipart/form-data">
                                 @csrf
                                 <div class="card-body">
@@ -63,7 +63,7 @@
                                 <!-- /.card-body -->
                                 <div class="card-footer">
                                 <button type="submit" class="btn btn-primary">Update Image</button>
-                                <a href="{{ route('view_projects') }}"><button type="button" class="btn btn-danger">View Projects</button></a>
+                                <a href="{{ route('view_partners') }}"><button type="button" class="btn btn-danger">View Partner</button></a>
                                 </div>
                             </form>
                         </div>

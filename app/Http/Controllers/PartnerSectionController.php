@@ -53,7 +53,7 @@ public function view_partners()
         $Projects = PartnerImages::with('PartnersSections')->where('id',$id)->first();
         //check the array if there is any value then change it
 
-    return view('Back-End\Home-Page\projects\Edit_Single_parteners',compact('Projects'));
+    return view('Back-End.Home-Page.partners.Edit_Single_partner',compact('Projects'));
     }
 
 
@@ -61,7 +61,6 @@ public function view_partners()
     {
         $Projects = PartnerImages::with('PartnersSections')->where('id',$id)->first();
         # add projects
-
         if(empty($request->status)){
             $status = 0;
         }else{

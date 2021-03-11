@@ -33,7 +33,7 @@
                             </div>
                             <!-- /.card-header -->
                             <!-- form start -->
-                            <form id="quickForm" action="{{ route('update_partners',[$Projects->id]  ) }}" method="post"
+                            <form id="quickForm" action="{{ route('update_Project',$Projects->id  ) }}" method="post"
                                 enctype="multipart/form-data">
                                 @csrf
                                 <div class="card-body">
@@ -42,7 +42,7 @@
                                     <div class="form-group">
                                     <label for="exampleInputavater">Select Section</label>
                                    <Select class="form-control" name="section" id="exampleInputavatar" disabled>
-                                       <option value="{{ $Projects->projectSections ->id }}">{{ $Projects->projectSections ->name }}</option>
+                                       <option value="{{ $Projects->sec_id }}">{{ $Projects->projectSections->name }}</option>
                                    </Select>
                                 </div>
                                     <div class="form-group pt-12">
@@ -63,7 +63,7 @@
                                 <!-- /.card-body -->
                                 <div class="card-footer">
                                 <button type="submit" class="btn btn-primary">Update Image</button>
-                                <a href="{{ route('view_projects') }}"><button type="button" class="btn btn-danger">View Parteners</button></a>
+                                <a href="{{ route('view_projects') }}"><button type="button" class="btn btn-danger">View Projects</button></a>
                                 </div>
                             </form>
                         </div>
