@@ -30,7 +30,7 @@ h1{
   font-weight: 400;
   text-shadow: 0 1px white, 0 2px black;
 }
-.container{
+.container1{
   margin: 4% auto;
   width: 210px;
   height: 140px;
@@ -175,8 +175,8 @@ img:hover{
     <span class="letter">S</span>
 </h1>
 
-<h1> 9Yards Projects </h1>
-  <div class="container">
+<h1> 9Yards Events </h1>
+  <div class="container1">
     <div id="carousel">
         @foreach ($Projects as $sections)
         @if($sections->status==1)

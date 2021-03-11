@@ -8,7 +8,7 @@
      <div class="navbar-links">
          <ul class="main-top-nav-bar">
              <li><a href="{{ route('main_page') }}">Home</a></li>
-             <li class="active-top-navbar"><a href="#">About</a></li>
+             <li class="active-top-navbar"><a href="{{ route('events') }}">Projects</a></li>
              <li><a href="{{ route('Products') }}">Products</a></li>
              <li><a href="#">Contact Us</a></li>
 
