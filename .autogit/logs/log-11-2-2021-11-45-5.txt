@@ -1,0 +1,117 @@
+-------------------- Auto-Git Log --------------------
+		Thu Mar 11 2021 11:45:05 GMT+0400 (Gulf Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/PartnerSectionController.php
+* app/Http/Controllers/ProductController.php
+* app/Http/Controllers/ProjectController.php
+
+
+Created files:
+* .autogit/logs/log-11-2-2021-11-14-25.txt
+* public/img/projects/1061926.png
+* public/img/projects/1500756.png
+* public/img/projects/5172801.png
+
+
+Deleted files:
+* public/img/projects/1288295.jpeg
+* public/img/projects/1455299.jpeg
+* public/img/projects/1499529.jpeg
+* public/img/projects/158296.jpeg
+* public/img/projects/1702368.jpeg
+* public/img/projects/1769402.png
+* public/img/projects/1854070.jpeg
+* public/img/projects/1923807.png
+* public/img/projects/1935147.jpeg
+* public/img/projects/2288500.png
+* public/img/projects/2338993.jpeg
+* public/img/projects/249108.jpeg
+* public/img/projects/2850316.jpeg
+* public/img/projects/2894742.jpeg
+* public/img/projects/2958293.png
+* public/img/projects/3035720.png
+* public/img/projects/3068816.png
+* public/img/projects/3074872.jpeg
+* public/img/projects/3095817.jpeg
+* public/img/projects/3174023.jpeg
+* public/img/projects/3197894.png
+* public/img/projects/3276589.png
+* public/img/projects/3280592.jpeg
+* public/img/projects/391874.jpeg
+* public/img/projects/3948588.jpeg
+* public/img/projects/4002292.jpeg
+* public/img/projects/4082930.png
+* public/img/projects/4291949.jpeg
+* public/img/projects/4332810.jpeg
+* public/img/projects/4437848.jpeg
+* public/img/projects/4502612.jpeg
+* public/img/projects/4527479.jpeg
+* public/img/projects/4555955.png
+* public/img/projects/4729609.jpeg
+* public/img/projects/4735727.jpeg
+* public/img/projects/4805791.jpeg
+* public/img/projects/4832975.jpeg
+* public/img/projects/4838125.jpeg
+* public/img/projects/4878419.jpeg
+* public/img/projects/4946610.jpeg
+* public/img/projects/4992314.jpeg
+* public/img/projects/5158575.jpeg
+* public/img/projects/5252308.png
+* public/img/projects/5363702.jpeg
+* public/img/projects/5402185.jpeg
+* public/img/projects/5425239.jpeg
+* public/img/projects/545830.jpeg
+* public/img/projects/5530769.jpeg
+* public/img/projects/5593121.jpeg
+* public/img/projects/5929714.jpeg
+* public/img/projects/616424.jpeg
+* public/img/projects/6263002.png
+* public/img/projects/6385723.jpeg
+* public/img/projects/662971.png
+* public/img/projects/712986.jpeg
+* public/img/projects/727679.png
+* public/img/projects/7396864.jpeg
+* public/img/projects/7455874.jpeg
+* public/img/projects/7651708.png
+* public/img/projects/7687098.jpeg
+* public/img/projects/7724296.jpeg
+* public/img/projects/7933437.jpeg
+* public/img/projects/8042303.jpeg
+* public/img/projects/8090065.jpeg
+* public/img/projects/8102330.jpeg
+* public/img/projects/8182972.jpeg
+* public/img/projects/8183867.jpeg
+* public/img/projects/8300440.png
+* public/img/projects/8305965.jpeg
+* public/img/projects/8413811.png
+* public/img/projects/8478104.jpeg
+* public/img/projects/8624434.jpeg
+* public/img/projects/876134.png
+* public/img/projects/8782949.jpeg
+* public/img/projects/8975786.jpeg
+* public/img/projects/9124140.jpeg
+* public/img/projects/9171535.png
+* public/img/projects/9235827.jpeg
+* public/img/projects/9250117.jpeg
+* public/img/projects/9400488.jpeg
+* public/img/projects/972378.png
+* public/img/projects/9870117.jpeg
+* "public/img/projects/Credentials presentation 2021-3.jpg"
+* "public/img/projects/Logo - PNG.png"
+* "public/img/projects/acc sharing.JPG"
+* "public/img/projects/seo sharing.JPG"
+
+
+Renamed files:
+* [object Object]
+* [object Object]
+* [object Object]
+* [object Object]
+* [object Object]
+* [object Object]
+* [object Object]
+* [object Object]
+* [object Object]
+* [object Object]
