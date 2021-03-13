@@ -1,0 +1,24 @@
+-------------------- Auto-Git Log --------------------
+		Thu Mar 11 2021 17:22:12 GMT+0400 (Gulf Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/FrontIndexController.php
+* app/Http/Controllers/ProductController.php
+* resources/views/Back-End/Product/Add_Product.blade.php
+* resources/views/Front-End/Projects/view_all_projects.blade.php
+* resources/views/layouts/front-layout/homePage.blade.php
+
+
+Created files:
+* .autogit/logs/log-11-2-2021-16-51-35.txt
+* public/img/products/1841389.jpeg
+* public/img/products/4388765.jpeg
+* public/img/products/7268882.jpeg
+* public/img/products/88331.jpeg
+
+
+Deleted files:
+
+
+Renamed files:

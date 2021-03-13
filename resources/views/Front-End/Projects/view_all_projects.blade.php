@@ -5,16 +5,15 @@
     <ul class="mb-5">
         <a href="#"><li class="shadow-md d-inline border-2 py-3 px-10 text-bold text-black cursor-pointer hover:bg-black hover:bold hover:text-white ">All</li></a>
         @foreach ($Products as $Product)
-        @if(!empty($Product->Category->name))
-        <a href="{{ $Product->cat_id }}"><li class=" shadow-md d-inline border-2 py-3 px-10 text-bold text-black cursor-pointer hover:bg-black hover:bold hover:text-white ">{{ $Product->Category->name }}</li></a>
+        @if(!empty($Product->name))
+        <a href="{{ $Product->id }}"><li class=" shadow-md d-inline border-2 py-3 px-10 text-bold text-black cursor-pointer hover:bg-black hover:bold hover:text-white ">{{ $Product->name }}</li></a>
         @endif
         @endforeach
     </ul>
     <div class="row">
         @foreach ($Products as $Product)
         @if($Product->status == 1)
-        @foreach($$Product->Products as $value)
-
+        @foreach($Product->Products as $value)
         <div class="col-sm-12 col-md-6 col-lg-3 gap-4 mb-10">
             <div class="product-card-container">
                 <div class="product-card">
@@ -28,26 +27,21 @@
                     </div>
                     <div class="header text-center">
                         <h1>{{ $value->name }}</h1>
-                        <a href="{{ $Product->id }}">
+                        <a href="{{ $value->id }}">
                             <button class="glow-on-hover">View Product <i class="fa fa-eye"></i></button>
                         </a>
                     </div>
                     <!-- end of header -->
                     <div class="product-img pt-5">
-                        <img src="{{ asset('img/products/'.$value->image) }}" alt="{{ $Pvalue->image }}"
+                        <img src="{{ asset('img/products/'.$value->image) }}" alt="{{ $value->image }}"
                             width="100px" height="30px" />
                     </div>
 
                 </div> <!-- end of product-card -->
             </div><!-- end of product-card-container -->
         </div>
-        @else
-        <div class="d-none">
-
-        </div>
-        @endif
-
         @endforeach
+        @endif
         @endforeach
     </div>
 </div>
