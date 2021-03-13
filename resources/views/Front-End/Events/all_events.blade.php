@@ -37,6 +37,22 @@ h1{
   position: relative;
   perspective: 1000px;
 }
+
+@media (max-width:500px) {
+  h1{
+  margin: 8%;
+  font-size: 3em;
+
+}
+  .container1{
+  margin: 8% ;
+  width: 210px;
+  height: 140px;
+  position: relative;
+  perspective: 1000px;
+}
+
+}
 #carousel{
   width: 100%;
   height: 100%;
@@ -255,6 +271,8 @@ img:hover{
   opacity: 1;
 }
 
+
+
 </style>
 
 <h1>
@@ -326,7 +344,7 @@ img:hover{
     <!-- this section is to show all th project s from the database -->
      @foreach ($Projects as $sections)
      @if($sections->status==1)
-     <div class="col-3">
+     <div class=" col-sm-12 col-md-6 col-lg-3">
         @foreach ($sections->projectImages as $image)
          @if($image->status == 1)
          <img src="{{ asset('img/projects/'.$image->Image) }}" alt="{{ $image->Image }}" width="100%">
