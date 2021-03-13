@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Sat Mar 13 2021 10:51:15 GMT+0400 (Gulf Standard Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/Front-End/Events/all_events.blade.php
+
+
+Created files:
+* .autogit/logs/log-13-2-2021-9-46-2.txt
+
+
+Deleted files:
+
+
+Renamed files:
