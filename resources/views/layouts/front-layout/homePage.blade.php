@@ -1,4 +1,10 @@
 <style>
+    .text-title .top-title{
+
+  border-top: 5px solid;
+  border-image:   linear-gradient(to right, #f175ae 25%, #9709f4 25%, #ac2ba7 50%,#eb9570 50%, #ffdaa0 75%, #ac2ba7 75%) 5;
+    }
+
     [class^=swiper-button-] {
         transition: all 0.3s ease;
     }
@@ -117,22 +123,25 @@
 
     .swiper-button-next {
         transform: translateX(-50px);
+
     }
 </style>
 
 <div class="px-0 pb-48" style="background-color: #FFF;">
     <div class="grid gap-4 pt-20 xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
-        <div class="text-center">
+        <div class="text-center ">
+
             @if ( $headerTitles->status == 1)
-            <h1 class="">
-                <p style="font-size: 200px;font-family: 'Playfair Display', serif;">{{ $headerTitles->top_title }}</p>
+            <h1 class="text-title">
+                <p class="top-title" style="font-size: 200px;font-family: 'Playfair Display', serif;">{{ $headerTitles->top_title }}</p>
                 <p style="font-family: 'Pinyon Script', cursive; font-size: 274px;margin-top: -91px;"
-                    class="text-blue-600 "> {{ $headerTitles->bottom_title }}</p>
+                class="text-blue-600 "> {{ $headerTitles->bottom_title }}</p>
             </h1>
             <p style="margin-top: -91px; font-size:45px" class="text-3xl text-gray-500 bold ">
                 {{ $headerTitles->paragraph}}</p>
             @else
             <h1 class="">
+                <div class="border-top"></div>
                 <p style="font-size: 200px;font-family: 'Playfair Display', serif;">9yards</p>
                 <p style="font-family: 'Pinyon Script', cursive; font-size: 274px;margin-top: -91px;"
                     class="text-blue-600 "> Events</p>
