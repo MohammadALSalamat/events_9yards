@@ -1,0 +1,15 @@
+-------------------- Auto-Git Log --------------------
+		Mon Jul 26 2021 14:50:31 GMT+0400 (Gulf Standard Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/layouts/front-layout/homePage.blade.php
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:
